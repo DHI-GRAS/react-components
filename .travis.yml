@@ -54,11 +54,11 @@ jobs:
       env:
         - STAGE_NAME="4x-electron on Travis CI"
       <<: *defaults
-    - stage: test
-      env:
-        - STAGE_NAME="4x-electron on Travis CI"
-      <<: *defaults
-    - stage: test
-      env:
-        - STAGE_NAME="4x-electron on Travis CI"
-      <<: *defaults
+    # - stage: test
+    #   env:
+    #     - STAGE_NAME="4x-electron on Travis CI"
+    #   <<: *defaults
+    # - stage: test
+    #   env:
+    #     - STAGE_NAME="4x-electron on Travis CI"
+    #   <<: *defaults
