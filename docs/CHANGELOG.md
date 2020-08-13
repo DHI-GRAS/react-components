@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/DHI-GRAS/react-components/compare/v1.0.2...v1.0.3) (2020-08-13)
+
+
+### Bug Fixes
+
+* **travis:** Add access:public ([7e4565c](https://github.com/DHI-GRAS/react-components/commit/7e4565cfff2ffd056dac2405cbf0e45f3151c75c))
+* **travis:** Remove test stages in travis ([540728c](https://github.com/DHI-GRAS/react-components/commit/540728cb7e98554ebf26ac5d44d49af77cf6ccdd))
+* **travis:** Revert to previous name ([36be450](https://github.com/DHI-GRAS/react-components/commit/36be450dc9927eaac0f88228153d5e8cb57dc4d0))
+
 ## [1.0.1](https://github.com/DHI-GRAS/react-components/compare/v1.0.0...v1.0.1) (2020-08-13)
 
 
