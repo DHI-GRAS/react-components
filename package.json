@@ -1,7 +1,10 @@
 {
   "name": "react-components",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "publishConfig": {
+    "name": "@DHI-GRAS/react-components"
+  },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -27,7 +30,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject",
     "semantic-release": "npx semantic-release"
   },
