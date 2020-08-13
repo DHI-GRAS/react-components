@@ -1,6 +1,6 @@
 {
   "name": "@me-test/react-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "publishConfig": {
     "name": "@me-test/react-components"

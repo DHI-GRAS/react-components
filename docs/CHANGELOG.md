@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/DHI-GRAS/react-components/compare/v1.0.1...v1.0.2) (2020-08-13)
+
+
+### Bug Fixes
+
+* **travis:** Add / to registry url and change package json name ([cc222b8](https://github.com/DHI-GRAS/react-components/commit/cc222b84f69550bbd7cf25b809cf5cc2970214f2))
+
 ## [1.0.1](https://github.com/DHI-GRAS/react-components/compare/v1.0.0...v1.0.1) (2020-08-13)
 
 
