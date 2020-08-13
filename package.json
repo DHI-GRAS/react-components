@@ -1,9 +1,9 @@
 {
-  "name": "react-components",
+  "name": "@me-test/react-components",
   "version": "1.0.1",
   "private": false,
   "publishConfig": {
-    "name": "@DHI-GRAS/react-components"
+    "name": "@me-test/react-components"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
