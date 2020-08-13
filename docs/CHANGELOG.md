@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/DHI-GRAS/react-components/compare/v1.0.7...v1.1.0) (2020-08-13)
+
+
+### Features
+
+* **keywords:** Add keywords to package json ([163154e](https://github.com/DHI-GRAS/react-components/commit/163154eba038d1bcb2e1ddefb074bed3f3d4bdb2))
+
 ## [1.0.7](https://github.com/DHI-GRAS/react-components/compare/v1.0.6...v1.0.7) (2020-08-13)
 
 
