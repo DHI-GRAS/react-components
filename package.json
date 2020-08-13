@@ -29,7 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "semantic-release": "env-cmd -f .env npx semantic-release"
+    "semantic-release": "npx semantic-release"
   },
   "eslintConfig": {
     "extends": "react-app"

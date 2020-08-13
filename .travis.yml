@@ -2,26 +2,9 @@ language: node_js
 
 node_js:
   # Node 10.3+ includes npm@6 which has good "npm ci" command
-  - 10.8
+  - 12.18.3
 
-# # if using Ubuntu 16 need this library
-# # https://github.com/cypress-io/cypress-documentation/pull/1647
-# addons:
-#   apt:
-#     packages:
-#       - libgconf-2-4
-
-# cache:
-#   # cache both npm modules and Cypress binary
-  npm: false,
-  yarn: true,
-  directories:
-    - ~/.yarn.lock
-    - ~/.cache
-#   override:
-#     - npm ci
-#     - npm run cy:verify
-#     - npm run cy:info
+cache: yarn
 
 defaults: &defaults
   install:
@@ -29,13 +12,13 @@ defaults: &defaults
     - yarn install
   script:
     #   ## print all Travis environment variables for debugging
-    - $(npm bin)/print-env TRAVIS
-    - yarn run start
+    # - $(npm bin)/print-env TRAVIS
+    # - yarn run start
     - yarn run semantic-release
     # - yarn run cy:run -- --record --parallel --group $STAGE_NAME
     # after all tests finish running we need
     # to kill all background jobs (like "npm start &")
-    - kill $(jobs -p) || true
+    # - kill $(jobs -p) || true
 
 jobs:
   include:
