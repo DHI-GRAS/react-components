@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/DHI-GRAS/react-components/compare/v1.0.5...v1.0.6) (2020-08-13)
+
+
+### Bug Fixes
+
+* **npm-publish:** Remove org name from registry url ([1cd03e5](https://github.com/DHI-GRAS/react-components/commit/1cd03e5064778f5aab1802e772d6ccfda897be17))
+
 ## [1.0.5](https://github.com/DHI-GRAS/react-components/compare/v1.0.4...v1.0.5) (2020-08-13)
 
 
