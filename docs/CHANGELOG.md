@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/DHI-GRAS/react-components/compare/v1.0.0...v1.0.1) (2020-08-13)
+
+
+### Bug Fixes
+
+* **travis:** Trigger second release ([febde93](https://github.com/DHI-GRAS/react-components/commit/febde935e7986ca3bcd9bc12f1f3c297db54b313))
+
 # 1.0.0 (2020-08-13)
 
 
