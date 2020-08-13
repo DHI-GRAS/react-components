@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/DHI-GRAS/react-components/compare/v1.0.4...v1.0.5) (2020-08-13)
+
+
+### Bug Fixes
+
+* **npm-publish:** Replace registry url ([da3aab4](https://github.com/DHI-GRAS/react-components/commit/da3aab429251821a1d9da69f2807731b8e32721d))
+
 ## [1.0.4](https://github.com/DHI-GRAS/react-components/compare/v1.0.3...v1.0.4) (2020-08-13)
 
 
