@@ -1,3 +1,11 @@
+## [1.0.7](https://github.com/DHI-GRAS/react-components/compare/v1.0.6...v1.0.7) (2020-08-13)
+
+
+### Bug Fixes
+
+* **npm-publish:** Fix conflict and merge ([82dad95](https://github.com/DHI-GRAS/react-components/commit/82dad952f90a96596da4086361f25288393cf367))
+* **npm-publish:** Replace [@me-test](https://github.com/me-test) with [@dhi-gras](https://github.com/dhi-gras) ([c7fc257](https://github.com/DHI-GRAS/react-components/commit/c7fc257b03a58afd204acc1ae4ea4c09a496759f))
+
 ## [1.0.6](https://github.com/DHI-GRAS/react-components/compare/v1.0.5...v1.0.6) (2020-08-13)
 
 
