@@ -10,20 +10,20 @@ defaults: &defaults
   install:
     # install dependencies
     - yarn install
-  script:
-    #   ## print all Travis environment variables for debugging
-    # - $(npm bin)/print-env TRAVIS
-    # - yarn run start
-    - yarn run semantic-release
-    # - yarn run cy:run -- --record --parallel --group $STAGE_NAME
-    # after all tests finish running we need
-    # to kill all background jobs (like "npm start &")
-    # - kill $(jobs -p) || true
+  # script:
+  #   #   ## print all Travis environment variables for debugging
+  #   # - $(npm bin)/print-env TRAVIS
+  #   # - yarn run start
+  #   - yarn run semantic-release
+  #   # - yarn run cy:run -- --record --parallel --group $STAGE_NAME
+  #   # after all tests finish running we need
+  #   # to kill all background jobs (like "npm start &")
+  #   # - kill $(jobs -p) || true
 
 jobs:
   include:
-    # we have multiple jobs to execute using just a single stage
-    # but we can pass group name via environment variable to Cypress test runner
+    # # we have multiple jobs to execute using just a single stage
+    # # but we can pass group name via environment variable to Cypress test runner
     - stage: test
       env:
         - STAGE_NAME="1x-electron on Travis CI"
@@ -37,6 +37,13 @@ jobs:
       env:
         - STAGE_NAME="4x-electron on Travis CI"
       <<: *defaults
+    - stage: release
+      # Advanced: optionally overwrite your default `script` step to skip the tests
+      # script: skip
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script: yarn run semantic-release
     # - stage: test
     #   env:
     #     - STAGE_NAME="4x-electron on Travis CI"
