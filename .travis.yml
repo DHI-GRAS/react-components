@@ -10,6 +10,7 @@ defaults: &defaults
   install:
     # install dependencies
     - yarn install
+
   # script:
   #   #   ## print all Travis environment variables for debugging
   #   # - $(npm bin)/print-env TRAVIS

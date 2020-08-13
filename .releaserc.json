@@ -1,6 +1,6 @@
 {
   "branches": ["master"],
-  "repositoryUrl": "https://github.com/DHI-GRAS/gras-storybook",
+  "repositoryUrl": "https://github.com/DHI-GRAS/react-components",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
