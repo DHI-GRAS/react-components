@@ -12,7 +12,7 @@ defaults: &defaults
     - yarn install
   script:
     #   ## print all Travis environment variables for debugging
-    - $(npm bin)/print-env TRAVIS
+    # - $(npm bin)/print-env TRAVIS
     # - yarn run start
     - yarn run semantic-release
     # - yarn run cy:run -- --record --parallel --group $STAGE_NAME
