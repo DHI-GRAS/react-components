@@ -35,6 +35,10 @@
     "eject": "react-scripts eject",
     "semantic-release": "npx semantic-release"
   },
+  "keywords": [
+    "components",
+    "DHI-GRAS"
+  ],
   "eslintConfig": {
     "extends": "react-app"
   },
