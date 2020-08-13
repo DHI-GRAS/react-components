@@ -33,7 +33,7 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/me-test/
       - run: yarn install --frozen-lockfile
-        # - run: npm publish
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
@@ -47,6 +47,6 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/DHI-GRAS
       - run: yarn install --frozen-lockfile
-        # - run: npm publish
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
