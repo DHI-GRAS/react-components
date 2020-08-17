@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/DHI-GRAS/react-components/compare/v1.1.6...v1.1.7) (2020-08-17)
+
+
+### Bug Fixes
+
+* **boilerplate:** Push latest build to the repo from gh workflow ([69dd782](https://github.com/DHI-GRAS/react-components/commit/69dd782b77466d175932045b327a0bc859f03405))
+
 ## [1.1.6](https://github.com/DHI-GRAS/react-components/compare/v1.1.5...v1.1.6) (2020-08-17)
 
 
