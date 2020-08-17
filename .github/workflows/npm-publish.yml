@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -19,9 +21,9 @@ jobs:
       - run: yarn build
       - run: yarn link
       - name: Commit changes
-        uses: EndBug/add-and-commit@v4
+        uses: stefanzweifel/git-auto-commit-action@v4.4.1
         with:
-          add: 'dist'
+          commit_message: Commit latest build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   #       - run: npm test
