@@ -18,8 +18,13 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn link
+      - run: git init
+      - run: git status
+      - run: git add -A
+      - run: git commit -m "add new files to build"
+      - run: git pull origin master
+      - run: git push origin master
   #       - run: npm test
-
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
