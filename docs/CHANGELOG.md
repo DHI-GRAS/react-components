@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/DHI-GRAS/react-components/compare/v1.1.3...v1.1.4) (2020-08-17)
+
+
+### Bug Fixes
+
+* **boilerplate:** Fix React external webpack and add travis build ([a2ed3e9](https://github.com/DHI-GRAS/react-components/commit/a2ed3e99648ce7fd7a3efb2b7b7602a300bf0ef0))
+
 ## [1.1.3](https://github.com/DHI-GRAS/react-components/compare/v1.1.2...v1.1.3) (2020-08-17)
 
 
