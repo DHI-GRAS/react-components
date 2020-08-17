@@ -16,11 +16,8 @@ jobs:
         with:
           node-version: 12
       - run: yarn install --frozen-lockfile
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: yarn build
+      - run: yarn link
   #       - run: npm test
 
   publish-npm:
@@ -32,7 +29,6 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org
-      - run: yarn install --frozen-lockfile
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
@@ -46,7 +42,6 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/dhi-gras/
-      - run: yarn install --frozen-lockfile
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
