@@ -2,7 +2,7 @@
   "name": "@dhi-gras/react-components",
   "description": "Generic react components for our frontends",
   "author": "DHI-GRAS",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "publishConfig": {
     "name": "@dhi-gras/react-components",
