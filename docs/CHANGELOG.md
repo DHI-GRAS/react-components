@@ -1,3 +1,15 @@
+## [1.1.3](https://github.com/DHI-GRAS/react-components/compare/v1.1.2...v1.1.3) (2020-08-17)
+
+
+### Bug Fixes
+
+* **boilerplate:** add react-scripts and webpack as dependencies ([2da4cf2](https://github.com/DHI-GRAS/react-components/commit/2da4cf2a6975dda7d383aec17abf245ac5289597))
+* **boilerplate:** Add test script ([4a52fbe](https://github.com/DHI-GRAS/react-components/commit/4a52fbeaff6500ab4f7a8b0384022c20c28fe96d))
+* **boilerplate:** Add webpack and babel ([f2d3e41](https://github.com/DHI-GRAS/react-components/commit/f2d3e41d28aa861223c203b7e2093fa59318ca5a))
+* **boilerplate:** Modify CI env ([3172533](https://github.com/DHI-GRAS/react-components/commit/3172533eccf6309b5ba5056eac7b05a42109a62e))
+* **boilerplate:** remove redundant scripts ([a000807](https://github.com/DHI-GRAS/react-components/commit/a0008075d63f621f6e495aea34d8df414b4ea2de))
+* **boilerplate:** Remove webpack from devDep/dep ([b7b7457](https://github.com/DHI-GRAS/react-components/commit/b7b7457ad4f98697a975d985b7078acdb9ca14a6))
+
 ## [1.1.2](https://github.com/DHI-GRAS/react-components/compare/v1.1.1...v1.1.2) (2020-08-17)
 
 
