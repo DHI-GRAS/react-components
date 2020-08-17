@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/DHI-GRAS/react-components/compare/v1.1.7...v1.1.8) (2020-08-17)
+
+
+### Bug Fixes
+
+* **boilerplate:** Add global config for git ([d2884c8](https://github.com/DHI-GRAS/react-components/commit/d2884c8cfc10125c15711c143dfce7332a70397a))
+
 ## [1.1.7](https://github.com/DHI-GRAS/react-components/compare/v1.1.6...v1.1.7) (2020-08-17)
 
 
