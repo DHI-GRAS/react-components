@@ -55,6 +55,7 @@
   },
   "scripts": {
     "build": "webpack --mode production",
+    "test": "react-scripts test --passWithNoTests",
     "semantic-release": "npx semantic-release"
   },
   "keywords": [
