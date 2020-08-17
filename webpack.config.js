@@ -22,25 +22,24 @@ module.exports = {
       },
     ],
   },
-  externals: [
-    externalForMaterialUi,
-    {
-      'env-cmd': 'env-cmd',
-      formik: 'formik',
-      'formik-material-ui': 'formik-material-ui',
-      'prop-types': 'prop-types',
-      react: 'React',
-      'react-dom': 'react-dom',
-      'react-spinners': 'react-spinners',
-      yup: 'yup',
-    },
-  ],
+  // externals: [
+  //   externalForMaterialUi,
+  //   {
+  //     'env-cmd': 'env-cmd',
+  //     formik: 'formik',
+  //     'formik-material-ui': 'formik-material-ui',
+  //     'prop-types': 'prop-types',
+  //     'react-dom': 'react-dom',
+  //     'react-spinners': 'react-spinners',
+  //     yup: 'yup',
+  //   },
+  // ],
 };
 
-function externalForMaterialUi(context, request, callback) {
-  if (/@material-ui.+/.test(request)) {
-    const name = request.replace(/^.*[\\\/]/, '');
-    return callback(null, 'root MaterialUI.' + name);
-  }
-  callback();
-}
+// function externalForMaterialUi(context, request, callback) {
+//   if (/@material-ui.+/.test(request)) {
+//     const name = request.replace(/^.*[\\/]/, '');
+//     return callback(null, 'root MaterialUI.' + name);
+//   }
+//   callback();
+// }
