@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/DHI-GRAS/react-components/compare/v1.1.5...v1.1.6) (2020-08-17)
+
+
+### Bug Fixes
+
+* **boilerplate:** Change exports in index.js ([3ed5a4e](https://github.com/DHI-GRAS/react-components/commit/3ed5a4e55c655f712a1504797c8c0e4be2289f34))
+
 ## [1.1.5](https://github.com/DHI-GRAS/react-components/compare/v1.1.4...v1.1.5) (2020-08-17)
 
 
