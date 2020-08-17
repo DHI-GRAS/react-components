@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/DHI-GRAS/react-components/compare/v1.1.4...v1.1.5) (2020-08-17)
+
+
+### Bug Fixes
+
+* **boilerplate:** Add all dependencies instead of peerDependencies ([97c365e](https://github.com/DHI-GRAS/react-components/commit/97c365efb70f149b9c894a31de369607a21b5774))
+
 ## [1.1.4](https://github.com/DHI-GRAS/react-components/compare/v1.1.3...v1.1.4) (2020-08-17)
 
 
