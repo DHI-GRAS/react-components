@@ -16,10 +16,6 @@
     "/dist",
     "README.md"
   ],
-  "dependencies": {
-    "webpack": "4.44.1",
-    "react-scripts": "3.4.2"
-  },
   "peerDependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -50,8 +46,8 @@
     "sass-loader": "^9.0.3",
     "semantic-release": "^17.0.8",
     "style-loader": "^1.2.1",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "react-scripts": "3.4.2"
   },
   "scripts": {
     "build": "webpack --mode production",
