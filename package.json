@@ -54,10 +54,7 @@
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "webpack --mode production",
-    "test": "react-scripts test --passWithNoTests",
-    "eject": "react-scripts eject",
     "semantic-release": "npx semantic-release"
   },
   "keywords": [
