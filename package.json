@@ -3,6 +3,7 @@
   "description": "Generic react components for our frontends",
   "author": "DHI-GRAS",
   "version": "1.1.0",
+  "main": "./index.js",
   "private": false,
   "publishConfig": {
     "name": "@dhi-gras/react-components",
