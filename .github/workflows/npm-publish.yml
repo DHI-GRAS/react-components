@@ -24,8 +24,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4.4.1
         with:
           commit_message: Commit latest build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   #       - run: npm test
   publish-npm:
     needs: build
