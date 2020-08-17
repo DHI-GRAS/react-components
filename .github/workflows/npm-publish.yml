@@ -15,11 +15,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      - run: git init
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn link
-      - run: git init
       - run: git status
+      - run: git config --global user.email "bertea74@gmail.com"
+      - run: git config --global user.name "bertearazvan"
       - run: git add -A
       - run: git commit -m "add new files to build"
       - run: git pull origin master
