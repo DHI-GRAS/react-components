@@ -39,6 +39,9 @@ jobs:
     #   env:
     #     - STAGE_NAME="4x-electron on Travis CI"
     #   <<: *defaults
+    - stage: build
+      provider: script
+      script: yarn build
     - stage: release
       # Advanced: optionally overwrite your default `script` step to skip the tests
       # script: skip
