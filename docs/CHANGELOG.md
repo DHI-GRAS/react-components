@@ -1,3 +1,11 @@
+## [1.1.10](https://github.com/DHI-GRAS/react-components/compare/v1.1.9...v1.1.10) (2020-08-17)
+
+
+### Bug Fixes
+
+* **boilerpalte:** Commit latest changes ([8da6777](https://github.com/DHI-GRAS/react-components/commit/8da6777846c8bd53f02af314faa0487845e9909e))
+* **boilerplate:** Use another auto-commiter ([97f6286](https://github.com/DHI-GRAS/react-components/commit/97f6286cf2e5161d99ecd4f7dc4d6501d37d8a64))
+
 ## [1.1.9](https://github.com/DHI-GRAS/react-components/compare/v1.1.8...v1.1.9) (2020-08-17)
 
 
