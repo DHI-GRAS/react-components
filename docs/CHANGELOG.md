@@ -1,3 +1,10 @@
+## [1.1.14](https://github.com/DHI-GRAS/react-components/compare/v1.1.13...v1.1.14) (2020-08-18)
+
+
+### Bug Fixes
+
+* **boilerplate:** add refs/heads/master for checkout ([e1f2319](https://github.com/DHI-GRAS/react-components/commit/e1f23198ea3b7ed7a75913cc85f53e39d2918974))
+
 ## [1.1.13](https://github.com/DHI-GRAS/react-components/compare/v1.1.12...v1.1.13) (2020-08-18)
 
 
