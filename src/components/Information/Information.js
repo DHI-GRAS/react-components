@@ -7,6 +7,7 @@ import {
   AccordionSummary,
   Typography,
   withTheme,
+  withStyles,
 } from '@material-ui/core';
 import { About, Contact, Disclaimer, FAQ, Privacy, Terms } from './partials';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -85,5 +86,6 @@ Information.propTypes = {
   title: PropTypes.string,
   component: PropTypes.elementType,
 };
+// export default withStyles(styles, { withTheme: true })(Information);
 
-export default Information;
+export { Information };

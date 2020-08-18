@@ -242,5 +242,4 @@ DynamicForm.propTypes = {
   fields: PropTypes.array,
   onSubmitForm: PropTypes.func,
 };
-
-export default DynamicForm;
+export { DynamicForm };

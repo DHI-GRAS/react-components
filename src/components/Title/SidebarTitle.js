@@ -96,4 +96,4 @@ SidebarTitle.propTypes = {
   bottomBorderColor: PropTypes.string,
 };
 
-export default SidebarTitle;
+export { SidebarTitle };
