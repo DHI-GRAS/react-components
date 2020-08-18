@@ -1,3 +1,10 @@
+## [1.1.18](https://github.com/DHI-GRAS/react-components/compare/v1.1.17...v1.1.18) (2020-08-18)
+
+
+### Bug Fixes
+
+* **boilerplate:** replace react with React in externals ([b12660e](https://github.com/DHI-GRAS/react-components/commit/b12660eaf140e6b1138fe86c0ac0934edd31b93c))
+
 ## [1.1.17](https://github.com/DHI-GRAS/react-components/compare/v1.1.16...v1.1.17) (2020-08-18)
 
 
