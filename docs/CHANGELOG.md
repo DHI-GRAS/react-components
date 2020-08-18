@@ -1,3 +1,10 @@
+## [1.1.13](https://github.com/DHI-GRAS/react-components/compare/v1.1.12...v1.1.13) (2020-08-18)
+
+
+### Bug Fixes
+
+* **boilerplate:** remove ref from checkout ([7ffc106](https://github.com/DHI-GRAS/react-components/commit/7ffc1061c5a457e07af21613e55096e2d5f64d29))
+
 ## [1.1.12](https://github.com/DHI-GRAS/react-components/compare/v1.1.11...v1.1.12) (2020-08-18)
 
 
