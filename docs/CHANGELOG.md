@@ -1,3 +1,12 @@
+## [1.1.21](https://github.com/DHI-GRAS/react-components/compare/v1.1.20...v1.1.21) (2020-08-18)
+
+
+### Bug Fixes
+
+* **boilerplate:** Something went wrong in the previous release ([1bd69f1](https://github.com/DHI-GRAS/react-components/commit/1bd69f1505dc286a56e8031a32218d13aa7cbbbc))
+* **boilerplate:** Something went wrong in the previous release ([224f6c0](https://github.com/DHI-GRAS/react-components/commit/224f6c0a279daee0235111ef70f86686315f2938))
+* **boilerplate:** Something went wrong in the previous release2 ([55ecbdb](https://github.com/DHI-GRAS/react-components/commit/55ecbdb9f8ca18ddb25406f37af155b148283b98))
+
 ## [1.1.20](https://github.com/DHI-GRAS/react-components/compare/v1.1.19...v1.1.20) (2020-08-18)
 
 
