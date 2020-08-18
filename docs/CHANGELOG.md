@@ -1,3 +1,10 @@
+## [1.1.12](https://github.com/DHI-GRAS/react-components/compare/v1.1.11...v1.1.12) (2020-08-18)
+
+
+### Bug Fixes
+
+* **boilerplate:** add master branch to push to ([d34d3e9](https://github.com/DHI-GRAS/react-components/commit/d34d3e967cc0c5c9fc9410e63ecf7711abae97ef))
+
 ## [1.1.11](https://github.com/DHI-GRAS/react-components/compare/v1.1.10...v1.1.11) (2020-08-18)
 
 
