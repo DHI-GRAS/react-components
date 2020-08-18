@@ -1,5 +1,5 @@
-export { default as Information } from './components/Information';
+import DynamicForm from './components/DynamicForm';
+import Information from './components/Information';
+import SidebarTitle from './components/Title';
 
-export { default as DynamicForm } from './components/DynamicForm';
-
-export { default as SidebarTitle } from './components/Title';
+export { Information, DynamicForm, SidebarTitle };
