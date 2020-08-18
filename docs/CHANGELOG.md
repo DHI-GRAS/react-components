@@ -1,3 +1,10 @@
+## [1.1.20](https://github.com/DHI-GRAS/react-components/compare/v1.1.19...v1.1.20) (2020-08-18)
+
+
+### Bug Fixes
+
+* **boilerplate:** Change React to react ([60b189b](https://github.com/DHI-GRAS/react-components/commit/60b189bf9c98af4cb26a4ee837de059c5ffe1aa1))
+
 ## [1.1.19](https://github.com/DHI-GRAS/react-components/compare/v1.1.18...v1.1.19) (2020-08-18)
 
 
