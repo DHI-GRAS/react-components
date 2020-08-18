@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core';
 import { BounceLoader } from 'react-spinners';
 import grasTheme from './../../styles/theme';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 // a
@@ -88,7 +88,7 @@ const dynamicFormStyle = makeStyles({
     color: '#0B4566',
   },
 });
-const DynamicForm = ({
+const DynamicFormComponent = ({
   disableButtonOnLoad = true,
   fields = [],
   validationSchema = Yup.object(),
@@ -235,11 +235,14 @@ const DynamicForm = ({
   );
 };
 
-DynamicForm.propTypes = {
+DynamicFormComponent.propTypes = {
   title: PropTypes.string,
   disableButtonOnLoad: PropTypes.bool,
   validationSchema: PropTypes.object,
   fields: PropTypes.array,
   onSubmitForm: PropTypes.func,
 };
+const DynamicForm = withStyles(dynamicFormStyle, { withTheme: true })(
+  DynamicFormComponent
+);
 export { DynamicForm };
