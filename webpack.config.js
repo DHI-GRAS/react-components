@@ -43,7 +43,7 @@ module.exports = {
       'formik-material-ui': 'formik-material-ui',
       'prop-types': 'prop-types',
       'react-dom': 'react-dom',
-      React: 'react',
+      react: 'react',
       'react-spinners': 'react-spinners',
       yup: 'yup',
     },
