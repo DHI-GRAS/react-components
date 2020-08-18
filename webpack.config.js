@@ -43,17 +43,17 @@ module.exports = {
       'formik-material-ui': 'formik-material-ui',
       'prop-types': 'prop-types',
       'react-dom': 'react-dom',
-      react: 'react',
+      react: 'React',
       'react-spinners': 'react-spinners',
       yup: 'yup',
     },
   ],
 };
 
-function externalForMaterialUi(context, request, callback) {
-  if (/@material-ui.+/.test(request)) {
-    const name = request.replace(/^.*[\\/]/, '');
-    return callback(null, 'root MaterialUI.' + name);
-  }
-  callback();
-}
+// function externalForMaterialUi(context, request, callback) {
+//   if (/@material-ui.+/.test(request)) {
+//     const name = request.replace(/^.*[\\/]/, '');
+//     return callback(null, 'root MaterialUI.' + name);
+//   }
+//   callback();
+// }
