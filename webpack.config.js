@@ -1,4 +1,17 @@
+const path = require('path');
 module.exports = {
+  target: 'web',
+  entry: {
+    index: './src/index.js',
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.js',
+    library: '@dhi-gras/react-components',
+    globalObject: 'this',
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
+  },
   module: {
     rules: [
       {
