@@ -1,3 +1,10 @@
+## [1.1.19](https://github.com/DHI-GRAS/react-components/compare/v1.1.18...v1.1.19) (2020-08-18)
+
+
+### Bug Fixes
+
+* **themed-components:** Add style to DynamicForm component ([ee542d6](https://github.com/DHI-GRAS/react-components/commit/ee542d68fb510967437c6804663f0bf7a2a89117))
+
 ## [1.1.18](https://github.com/DHI-GRAS/react-components/compare/v1.1.17...v1.1.18) (2020-08-18)
 
 
