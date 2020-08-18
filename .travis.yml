@@ -11,16 +11,16 @@ defaults: &defaults
     # install dependencies
     - yarn install
 
-  script:
-    #   ## print all Travis environment variables for debugging
-    # - $(npm bin)/print-env TRAVIS
-    # - yarn run start
-    - yarn build
-    - yarn link
-    # - yarn run cy:run -- --record --parallel --group $STAGE_NAME
-    # after all tests finish running we need
-    # to kill all background jobs (like "npm start &")
-    - kill $(jobs -p) || true
+  # script:
+  #   #   ## print all Travis environment variables for debugging
+  #   # - $(npm bin)/print-env TRAVIS
+  #   # - yarn run start
+  #   - yarn build
+  #   - yarn link
+  #   # - yarn run cy:run -- --record --parallel --group $STAGE_NAME
+  #   # after all tests finish running we need
+  #   # to kill all background jobs (like "npm start &")
+  #   - kill $(jobs -p) || true
 
 jobs:
   include:
