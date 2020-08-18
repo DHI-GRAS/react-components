@@ -1,3 +1,10 @@
+## [1.1.16](https://github.com/DHI-GRAS/react-components/compare/v1.1.15...v1.1.16) (2020-08-18)
+
+
+### Bug Fixes
+
+* **boilerplate:** Make changes so components are accessible ([5426c58](https://github.com/DHI-GRAS/react-components/commit/5426c589871e252466c28697583ba1940c67b0d0))
+
 ## [1.1.15](https://github.com/DHI-GRAS/react-components/compare/v1.1.14...v1.1.15) (2020-08-18)
 
 
