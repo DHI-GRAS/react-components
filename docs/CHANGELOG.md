@@ -1,3 +1,10 @@
+## [1.1.17](https://github.com/DHI-GRAS/react-components/compare/v1.1.16...v1.1.17) (2020-08-18)
+
+
+### Bug Fixes
+
+* **boilerplate:** Add back externals for an apparently working package ([46e1705](https://github.com/DHI-GRAS/react-components/commit/46e170517e562db3e2591f2ecedd0481c950912e))
+
 ## [1.1.16](https://github.com/DHI-GRAS/react-components/compare/v1.1.15...v1.1.16) (2020-08-18)
 
 
