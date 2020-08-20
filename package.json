@@ -57,12 +57,15 @@
     "react-dom": "^16.13.1",
     "react-spinners": "^0.9.0",
     "yup": "^0.29.3",
-    "react": "16.13.1"
+    "react": "16.13.1",
+    "yalc": "1.0.0-pre.42"
   },
   "scripts": {
-    "build": "webpack --mode production",
+    "build:dev": "yarn run webpack --mode development",
+    "build:prod": "yarn run webpack --mode production",
     "test": "react-scripts test --passWithNoTests",
-    "semantic-release": "npx semantic-release"
+    "semantic-release": "npx semantic-release",
+    "yalc:link": "yarn build:prod && yalc publish"
   },
   "keywords": [
     "components",
