@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 12
       - run: yarn install --frozen-lockfile
-      - run: yarn build
+      - run: yarn build:prod
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4.4.1
         with:
