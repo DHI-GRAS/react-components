@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/DHI-GRAS/react-components/compare/v1.1.21...v1.2.0) (2020-08-20)
+
+
+### Bug Fixes
+
+* **development-env:** Add the correct script for build in travis and gh actions ([3323f19](https://github.com/DHI-GRAS/react-components/commit/3323f1934c610b2b9fc78195176532709c7bf881))
+
+
+### Features
+
+* **development-environment:** Add yalc for local testing the published components ([2cc2a50](https://github.com/DHI-GRAS/react-components/commit/2cc2a50bbc8d8613ee7dd906d65fb3cf8fa71bac))
+
 ## [1.1.21](https://github.com/DHI-GRAS/react-components/compare/v1.1.20...v1.1.21) (2020-08-18)
 
 
