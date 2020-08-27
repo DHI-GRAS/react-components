@@ -7,9 +7,9 @@ import {
   Typography,
   ThemeProvider,
 } from '@material-ui/core';
+import { useTheme, Theme } from '@material-ui/core/styles';
 import { About, Contact, Disclaimer, FAQ, Privacy, Terms } from './partials';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import grasTheme from '../../styles/theme';
 const panels = [
   {
     title: 'FAQ',
@@ -40,13 +40,13 @@ const panels = [
 
 const Information = () => {
   const [expanded, setExpanded] = React.useState('');
-
+  const theme: Theme = useTheme();
   const handleChange = (panel) => (e, isExpanded) => {
     setExpanded(isExpanded ? panel : '');
   };
 
   return (
-    <ThemeProvider theme={grasTheme}>
+    <ThemeProvider theme={theme}>
       <Box>
         {panels.map(({ title, component: Component }) => (
           <Accordion
@@ -58,7 +58,7 @@ const Information = () => {
               expandIcon={
                 <ExpandMoreIcon
                   style={{
-                    color: '#0B4566',
+                    color: theme.palette.primary.main,
                     padding: 4,
                     width: '16px',
                   }}

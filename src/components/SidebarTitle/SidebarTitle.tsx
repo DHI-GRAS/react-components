@@ -1,22 +1,20 @@
 import * as React from 'react';
 import { Box, Grid, Typography, ThemeProvider } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import grasTheme from '../../styles/theme';
+import {
+  makeStyles,
+  Theme,
+  StyledProps,
+  useTheme,
+} from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles<Theme, StyledProps>({
   container: {
     padding: 16,
   },
-  titleMain: {
+  mainTitle: {
     fontSize: 20,
     fontWeight: 500,
-    padding: 0,
-    margin: 0,
-  },
-  subTitle: {
-    fontSize: 12,
-    padding: 0,
-    margin: 0,
+    color: '#0b4566',
   },
 });
 type SidebarTitleProps = {
@@ -41,9 +39,10 @@ const SidebarTitle = ({
   bottomBorderSize,
   bottomBorderColor,
 }: SidebarTitleProps) => {
-  const classes = useStyles();
+  const classes = useStyles({} as StyledProps);
+  const theme: Theme = useTheme();
   return (
-    <ThemeProvider theme={grasTheme}>
+    <ThemeProvider theme={theme}>
       <Box
         className={classes.container}
         style={{
@@ -54,9 +53,9 @@ const SidebarTitle = ({
         <Grid container spacing={0} justify="space-between">
           <Grid item xs={10}>
             <Typography
-              className={classes.titleMain}
+              className={classes.mainTitle}
               style={{ color: titleColor }}
-              color="primary"
+              variant={'h2'}
             >
               {title}
             </Typography>
@@ -69,13 +68,13 @@ const SidebarTitle = ({
         </Grid>
         {(subTitle || subTitle.length > 0) && (
           <>
-            {subTitle.map((text, index) => {
+            {subTitle.map((text: string, index: number) => {
               return (
                 <Typography
                   key={`subtitle-${index}`}
-                  className={classes.subTitle}
                   style={{ color: subTitleColor }}
                   color="secondary"
+                  variant="h4"
                 >
                   {text}
                 </Typography>

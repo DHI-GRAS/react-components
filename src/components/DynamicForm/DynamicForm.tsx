@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Formik, Field, Form } from 'formik';
 import { TextField, Select } from 'formik-material-ui';
 import {
-  ThemeProvider,
   Button,
   InputLabel,
   MenuItem,
@@ -12,10 +11,10 @@ import {
   FormHelperText,
   Box,
   Typography,
+  ThemeProvider,
 } from '@material-ui/core';
+import { useTheme, Theme } from '@material-ui/core/styles';
 import { BounceLoader } from 'react-spinners';
-import grasTheme from '../../styles/theme';
-import { makeStyles } from '@material-ui/core/styles';
 import * as Yup from 'yup';
 
 // const fields = [
@@ -82,14 +81,14 @@ type DynamicFormProps = {
   title: string;
 };
 
-const useStyles = makeStyles({
+const DynamicFormStyle = {
   mainTitle: {
     fontSize: 24,
     fontWeight: 700,
     color: '#00A4EC',
     textAlign: 'center',
   },
-});
+};
 
 const DynamicForm = ({
   disableButtonOnLoad = true,
@@ -98,14 +97,14 @@ const DynamicForm = ({
   onSubmitForm = () => {},
   title = '',
 }: DynamicFormProps) => {
-  const classes = useStyles();
+  const theme: Theme = useTheme();
   return (
-    <ThemeProvider theme={grasTheme}>
+    <ThemeProvider theme={theme}>
       <Paper>
         <Box p={4}>
           {title && (
             <Box pb={2}>
-              <Typography variant="h4" className={classes.mainTitle}>
+              <Typography variant="h1" style={{ textAlign: 'center' }}>
                 {title}
               </Typography>
             </Box>
@@ -220,7 +219,9 @@ const DynamicForm = ({
                       fullWidth
                       disabled={!isValid}
                       onClick={submitForm}
-                      style={{ marginTop: '1rem' }}
+                      style={{
+                        marginTop: '1rem',
+                      }}
                     >
                       Submit
                     </Button>

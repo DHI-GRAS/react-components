@@ -148,7 +148,7 @@ const Privacy = () => {
           <Link
             href="https://www.dhigroup.com/privacy/sharing-of-personal-data#companies"
             variant="body2"
-            style={{ color: 'blue' }}
+            style={{ color: '#00A4EC' }}
           >
             https://www.dhigroup.com/privacy/sharing-of-personal-data#companies
           </Link>
@@ -211,7 +211,7 @@ const Privacy = () => {
           link:
           <Link
             href="https://www.dhigroup.com/cookie-page"
-            style={{ color: 'blue' }}
+            style={{ color: '#00A4EC' }}
           >
             https://www.dhigroup.com/cookie-page
           </Link>
@@ -258,7 +258,7 @@ const Privacy = () => {
           delete your personal data, unless we can continue the processing based
           on another purpose. If you wish to withdraw your consent, please
           contact us at
-          <Link href="info@dhigroup.com" style={{ color: 'blue' }}>
+          <Link href="info@dhigroup.com" style={{ color: '#00A4EC' }}>
             info@dhigroup.com
           </Link>
           or +45 4516 9200.
@@ -296,7 +296,7 @@ const Privacy = () => {
           have recorded about you, or if you wish to get access to the data
           being processed about you, or if you have any questions concerning the
           above guidelines, you may contact us at{' '}
-          <Link href="info@dhigroup.com" style={{ color: 'blue' }}>
+          <Link href="info@dhigroup.com" style={{ color: '#00A4EC' }}>
             info@dhigroup.com
           </Link>{' '}
           or +45 4516 9200. You may also write to us at the following
