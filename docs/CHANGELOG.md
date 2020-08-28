@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/DHI-GRAS/react-components/compare/v1.2.0...v1.3.0) (2020-08-28)
+
+
+### Bug Fixes
+
+* **theme:** Add context theme for every component ([eeeae83](https://github.com/DHI-GRAS/react-components/commit/eeeae83b2b34ce4eda94cb7da4b9d6832c823a31))
+
+
+### Features
+
+* **typescript:** Migrate all the components to typescript ([15ced7e](https://github.com/DHI-GRAS/react-components/commit/15ced7e05ec74c9d1f3fc65cda07a242065abe18))
+
 # [1.2.0](https://github.com/DHI-GRAS/react-components/compare/v1.1.21...v1.2.0) (2020-08-20)
 
 
