@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/DHI-GRAS/react-components/compare/v1.4.0...v1.5.0) (2020-08-28)
+
+
+### Bug Fixes
+
+* **licence:** Add licence badge ([dfa2c89](https://github.com/DHI-GRAS/react-components/commit/dfa2c89d66f332a6142558680ccbf0da3f991c3c))
+* **licence:** Add licence to package.json ([91da77b](https://github.com/DHI-GRAS/react-components/commit/91da77bf8c3a3c6d6d3f54b6578cd6e76c9d57f6))
+
+
+### Features
+
+* **readme:** Add Readme file for the repo ([40c237f](https://github.com/DHI-GRAS/react-components/commit/40c237fdcba5b0156a2536d3e953b1694d98324d))
+
 # [1.4.0](https://github.com/DHI-GRAS/react-components/compare/v1.3.0...v1.4.0) (2020-08-28)
 
 
