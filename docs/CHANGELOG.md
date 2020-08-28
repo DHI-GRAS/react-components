@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/DHI-GRAS/react-components/compare/v1.3.0...v1.4.0) (2020-08-28)
+
+
+### Features
+
+* **contributors:** Add docs for repository contributors ([dc2a471](https://github.com/DHI-GRAS/react-components/commit/dc2a471ad2bdd18be674fcbfbff246da9394166e))
+
 # [1.3.0](https://github.com/DHI-GRAS/react-components/compare/v1.2.0...v1.3.0) (2020-08-28)
 
 
