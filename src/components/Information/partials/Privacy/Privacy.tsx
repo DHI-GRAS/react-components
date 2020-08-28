@@ -1,14 +1,12 @@
-import React from 'react';
-import { Box, Typography, Link, withStyles } from '@material-ui/core';
-
-import styles from './styles';
+import * as React from 'react';
+import { Box, Typography, Link } from '@material-ui/core';
 
 const noSpacing = {
   padding: 0,
   margin: 0,
 };
 
-const Privacy = ({ classes }) => {
+const Privacy = () => {
   return (
     <Box>
       <Box py={1}>
@@ -150,7 +148,7 @@ const Privacy = ({ classes }) => {
           <Link
             href="https://www.dhigroup.com/privacy/sharing-of-personal-data#companies"
             variant="body2"
-            className={classes.link}
+            style={{ color: '#00A4EC' }}
           >
             https://www.dhigroup.com/privacy/sharing-of-personal-data#companies
           </Link>
@@ -213,7 +211,7 @@ const Privacy = ({ classes }) => {
           link:
           <Link
             href="https://www.dhigroup.com/cookie-page"
-            className={classes.link}
+            style={{ color: '#00A4EC' }}
           >
             https://www.dhigroup.com/cookie-page
           </Link>
@@ -260,7 +258,7 @@ const Privacy = ({ classes }) => {
           delete your personal data, unless we can continue the processing based
           on another purpose. If you wish to withdraw your consent, please
           contact us at
-          <Link href="info@dhigroup.com" className={classes.link}>
+          <Link href="info@dhigroup.com" style={{ color: '#00A4EC' }}>
             info@dhigroup.com
           </Link>
           or +45 4516 9200.
@@ -298,7 +296,7 @@ const Privacy = ({ classes }) => {
           have recorded about you, or if you wish to get access to the data
           being processed about you, or if you have any questions concerning the
           above guidelines, you may contact us at{' '}
-          <Link href="info@dhigroup.com" className={classes.link}>
+          <Link href="info@dhigroup.com" style={{ color: '#00A4EC' }}>
             info@dhigroup.com
           </Link>{' '}
           or +45 4516 9200. You may also write to us at the following
@@ -320,4 +318,4 @@ const Privacy = ({ classes }) => {
   );
 };
 
-export default withStyles(styles, { withTheme: true })(Privacy);
+export default Privacy;

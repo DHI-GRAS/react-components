@@ -2,7 +2,7 @@ const path = require('path');
 module.exports = {
   target: 'web',
   entry: {
-    index: './src/index.js',
+    index: './src/index.ts',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -12,15 +12,12 @@ module.exports = {
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+  },
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
+      { test: /\.tsx?$/, use: ['ts-loader', 'react-docgen-typescript-loader'] },
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: [

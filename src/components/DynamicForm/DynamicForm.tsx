@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Formik, Field, Form } from 'formik';
 import { TextField, Select } from 'formik-material-ui';
 import {
-  ThemeProvider,
   Button,
   InputLabel,
   MenuItem,
@@ -12,13 +11,12 @@ import {
   FormHelperText,
   Box,
   Typography,
+  ThemeProvider,
 } from '@material-ui/core';
+import { useTheme, Theme } from '@material-ui/core/styles';
 import { BounceLoader } from 'react-spinners';
-import grasTheme from './../../styles/theme';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
 import * as Yup from 'yup';
-import PropTypes from 'prop-types';
-// a
+
 // const fields = [
 //   {
 //     name: 'email',
@@ -75,43 +73,44 @@ import PropTypes from 'prop-types';
 //     ],
 //   },
 // ];
-
-const contactStyle = {
-  color: '#00A4EC',
-  textAlign: 'center',
+type DynamicFormProps = {
+  disableButtonOnLoad: boolean;
+  fields: Array<object>;
+  validationSchema: any;
+  onSubmitForm: Function;
+  title: string;
 };
 
-const dynamicFormStyle = makeStyles({
-  h4: {
+const DynamicFormStyle = {
+  mainTitle: {
     fontSize: 24,
     fontWeight: 700,
-    color: '#0B4566',
+    color: '#00A4EC',
+    textAlign: 'center',
   },
-});
-const DynamicFormComponent = ({
+};
+
+const DynamicForm = ({
   disableButtonOnLoad = true,
   fields = [],
   validationSchema = Yup.object(),
   onSubmitForm = () => {},
   title = '',
-}) => {
+}: DynamicFormProps) => {
+  const theme: Theme = useTheme();
   return (
-    <ThemeProvider theme={grasTheme}>
+    <ThemeProvider theme={theme}>
       <Paper>
         <Box p={4}>
           {title && (
             <Box pb={2}>
-              <Typography
-                variant="h4"
-                className={dynamicFormStyle.h4}
-                style={contactStyle}
-              >
+              <Typography variant="h1" style={{ textAlign: 'center' }}>
                 {title}
               </Typography>
             </Box>
           )}
           <Formik
-            initialValues={fields.reduce((accumulator, element) => {
+            initialValues={fields.reduce((accumulator, element: any = {}) => {
               accumulator = {
                 ...accumulator,
                 [element.name]: element.initialValue,
@@ -138,7 +137,7 @@ const DynamicFormComponent = ({
                 )}
                 {!isSubmitting && (
                   <Grid container>
-                    {fields.map((item, i) => {
+                    {fields.map((item: any = {}, i) => {
                       if (item.componentType === 'TextField') {
                         return (
                           <Grid
@@ -220,7 +219,9 @@ const DynamicFormComponent = ({
                       fullWidth
                       disabled={!isValid}
                       onClick={submitForm}
-                      style={{ marginTop: '1rem' }}
+                      style={{
+                        marginTop: '1rem',
+                      }}
                     >
                       Submit
                     </Button>
@@ -235,14 +236,4 @@ const DynamicFormComponent = ({
   );
 };
 
-DynamicFormComponent.propTypes = {
-  title: PropTypes.string,
-  disableButtonOnLoad: PropTypes.bool,
-  validationSchema: PropTypes.object,
-  fields: PropTypes.array,
-  onSubmitForm: PropTypes.func,
-};
-const DynamicForm = withStyles(dynamicFormStyle, { withTheme: true })(
-  DynamicFormComponent
-);
-export { DynamicForm };
+export default DynamicForm;
