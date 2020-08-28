@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/DHI-GRAS/react-components/compare/v1.5.1...v1.5.2) (2020-08-28)
+
+
+### Bug Fixes
+
+* **licence:** Add MIT ([4ac7d8e](https://github.com/DHI-GRAS/react-components/commit/4ac7d8e3cc8d5fff9594fddf3655a7bc75778af1))
+
 ## [1.5.1](https://github.com/DHI-GRAS/react-components/compare/v1.5.0...v1.5.1) (2020-08-28)
 
 
