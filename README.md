@@ -6,7 +6,7 @@
 <div align="center">
 
 [![Build](https://travis-ci.com/DHI-GRAS/react-components.svg?branch=master)](https://travis-ci.com/DHI-GRAS/react-components)
-![Latest](https://img.shields.io/npm/v/@dhi-gras/react-components/latest)
+[![Latest](https://img.shields.io/npm/v/@dhi-gras/react-components/latest)](https://www.npmjs.com/package/@dhi-gras/react-components)
 
 </div>
 
