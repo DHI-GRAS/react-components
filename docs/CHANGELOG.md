@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/DHI-GRAS/react-components/compare/v1.5.0...v1.5.1) (2020-08-28)
+
+
+### Bug Fixes
+
+* **licence:** Add "LicenseRef-LICENSE" ([bca3ae1](https://github.com/DHI-GRAS/react-components/commit/bca3ae107bdd93bead696252d5fef433b911f2c2))
+
 # [1.5.0](https://github.com/DHI-GRAS/react-components/compare/v1.4.0...v1.5.0) (2020-08-28)
 
 
