@@ -7,6 +7,7 @@
 <div align="center">
 [[Build](https://travis-ci.com/DHI-GRAS/react-components.svg?branch=master)](https://travis-ci.com/DHI-GRAS/react-components)
 [[Latest](https://img.shields.io/npm/v/@dhi-gras/react-components/latest)](https://www.npmjs.com/package/@dhi-gras/react-components)
+[Licence](https://img.shields.io/npm/l/@dhi-gras/react-components)
 </div>
 
 Generic react components library for our frontends. The npm package can be found [here](https://www.npmjs.com/package/@dhi-gras/react-components).
