@@ -38,7 +38,7 @@ const panels = [
   },
 ];
 
-const Information = () => {
+const Information: React.FC = () => {
   const [expanded, setExpanded] = React.useState('');
   const theme: Theme = useTheme();
   const handleChange = (panel) => (e, isExpanded) => {

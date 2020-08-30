@@ -90,13 +90,13 @@ const DynamicFormStyle = {
   },
 };
 
-const DynamicForm = ({
+const DynamicForm: React.FC<DynamicFormProps> = ({
   disableButtonOnLoad = true,
   fields = [],
   validationSchema = Yup.object(),
   onSubmitForm = () => {},
   title = '',
-}: DynamicFormProps) => {
+}) => {
   const theme: Theme = useTheme();
   return (
     <ThemeProvider theme={theme}>
