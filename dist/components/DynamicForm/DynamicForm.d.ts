@@ -1,3 +1,4 @@
+import * as React from 'react';
 declare type DynamicFormProps = {
     disableButtonOnLoad: boolean;
     fields: Array<object>;
@@ -5,69 +6,5 @@ declare type DynamicFormProps = {
     onSubmitForm: Function;
     title: string;
 };
-declare const DynamicForm: {
-    ({ disableButtonOnLoad, fields, validationSchema, onSubmitForm, title, }: DynamicFormProps): JSX.Element;
-    displayName: string;
-    __docgenInfo: {
-        description: string;
-        displayName: string;
-        props: {
-            disableButtonOnLoad: {
-                defaultValue: {
-                    value: boolean;
-                };
-                description: string;
-                name: string;
-                required: boolean;
-                type: {
-                    name: string;
-                };
-            };
-            fields: {
-                defaultValue: {
-                    value: string;
-                };
-                description: string;
-                name: string;
-                required: boolean;
-                type: {
-                    name: string;
-                };
-            };
-            validationSchema: {
-                defaultValue: {
-                    value: string;
-                };
-                description: string;
-                name: string;
-                required: boolean;
-                type: {
-                    name: string;
-                };
-            };
-            onSubmitForm: {
-                defaultValue: {
-                    value: string;
-                };
-                description: string;
-                name: string;
-                required: boolean;
-                type: {
-                    name: string;
-                };
-            };
-            title: {
-                defaultValue: {
-                    value: string;
-                };
-                description: string;
-                name: string;
-                required: boolean;
-                type: {
-                    name: string;
-                };
-            };
-        };
-    };
-};
+declare const DynamicForm: React.FC<DynamicFormProps>;
 export default DynamicForm;
