@@ -81,22 +81,13 @@ type DynamicFormProps = {
   title: string;
 };
 
-const DynamicFormStyle = {
-  mainTitle: {
-    fontSize: 24,
-    fontWeight: 700,
-    color: '#00A4EC',
-    textAlign: 'center',
-  },
-};
-
-const DynamicForm = ({
+const DynamicForm: React.FC<DynamicFormProps> = ({
   disableButtonOnLoad = true,
   fields = [],
   validationSchema = Yup.object(),
   onSubmitForm = () => {},
   title = '',
-}: DynamicFormProps) => {
+}) => {
   const theme: Theme = useTheme();
   return (
     <ThemeProvider theme={theme}>

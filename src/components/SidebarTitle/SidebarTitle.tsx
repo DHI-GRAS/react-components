@@ -28,7 +28,7 @@ type SidebarTitleProps = {
   bottomBorderSize?: string | number;
   bottomBorderColor?: string;
 };
-const SidebarTitle = ({
+const SidebarTitle: React.FC<SidebarTitleProps> = ({
   title = 'Current title',
   subTitle = [''],
   image,
@@ -38,7 +38,7 @@ const SidebarTitle = ({
   subTitleColor = '#86a2b3',
   bottomBorderSize,
   bottomBorderColor,
-}: SidebarTitleProps) => {
+}) => {
   const classes = useStyles({} as StyledProps);
   const theme: Theme = useTheme();
   return (
