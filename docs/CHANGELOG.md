@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/DHI-GRAS/react-components/compare/v1.6.0...v1.6.1) (2020-08-31)
+
+
+### Bug Fixes
+
+* **CopyToClipboard:** Trigger small release because npm package did not get updated ([7a3d26c](https://github.com/DHI-GRAS/react-components/commit/7a3d26c7ff3258e218797bcc54e522acdf1affb4))
+
 # [1.6.0](https://github.com/DHI-GRAS/react-components/compare/v1.5.2...v1.6.0) (2020-08-31)
 
 

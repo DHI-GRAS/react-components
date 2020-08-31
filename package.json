@@ -3,7 +3,7 @@
   "description": "Generic react components for our frontends",
   "author": "DHI-GRAS",
   "license": "MIT",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "private": false,
   "main": "./dist/index.js",
   "publishConfig": {
