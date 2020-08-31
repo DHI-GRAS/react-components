@@ -1,3 +1,17 @@
+# [1.6.0](https://github.com/DHI-GRAS/react-components/compare/v1.5.2...v1.6.0) (2020-08-31)
+
+
+### Bug Fixes
+
+* **CopyToClipboard:** Add dynamic style from the theme ([6389299](https://github.com/DHI-GRAS/react-components/commit/63892997e8cc2b1f14f189a86dec4c625048ce70))
+* **CopyToClipboard:** Refactor code and types ([f615251](https://github.com/DHI-GRAS/react-components/commit/f615251d9ab8e71312b1cce935713e1cb98cf208))
+* **CopyToClipboard:** Remove redundant url prop ([5eb3839](https://github.com/DHI-GRAS/react-components/commit/5eb383901d10df73465ed210504a35832f9b531c))
+
+
+### Features
+
+* **CopyToClipboard:** Add CopyToClipbaord ([48789c2](https://github.com/DHI-GRAS/react-components/commit/48789c2a1314b8c8ec68dfeeb7a62bbe2e1fd3ec))
+
 ## [1.5.2](https://github.com/DHI-GRAS/react-components/compare/v1.5.1...v1.5.2) (2020-08-28)
 
 
