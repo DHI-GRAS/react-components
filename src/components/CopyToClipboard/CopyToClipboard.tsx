@@ -69,10 +69,10 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
           <Grid container alignItems="center" justify="center">
             <Tooltip title={tooltip}>
               <FileCopyOutlinedIcon
+                color="primary"
                 style={{
                   width: 21,
                   height: 21,
-                  color: '#0B4566',
                 }}
               />
             </Tooltip>
