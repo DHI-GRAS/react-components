@@ -24,7 +24,6 @@ type CopyToClipboardProps = {
 const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
   disabled = false,
   helperText = '',
-  url = false,
   message = '',
 }) => {
   const [copyUrl] = React.useState(window.location.href);
