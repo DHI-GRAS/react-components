@@ -81,15 +81,6 @@ type DynamicFormProps = {
   title: string;
 };
 
-const DynamicFormStyle = {
-  mainTitle: {
-    fontSize: 24,
-    fontWeight: 700,
-    color: '#00A4EC',
-    textAlign: 'center',
-  },
-};
-
 const DynamicForm: React.FC<DynamicFormProps> = ({
   disableButtonOnLoad = true,
   fields = [],

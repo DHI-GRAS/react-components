@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Grid, Tooltip, ThemeProvider, TextField } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
@@ -31,10 +31,12 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
   const [tooltip, setTooltip] = React.useState(
     helperText ? helperText : message ? 'Copy text' : 'Copy URL'
   );
-  const [inputEl, setInputEl] = React.useState(document.createElement('input'));
+  const [inputEl, setInputEl] = React.useState(
+    document.createElement('div') as HTMLInputElement
+  );
   const theme = useTheme();
   const copyAction = () => {
-    inputEl.children[1].children[0].select();
+    (inputEl.children[1].children[0] as HTMLInputElement).select();
     document.execCommand('copy');
 
     if (message) {
@@ -79,7 +81,7 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
         </Grid>
         <TextField
           style={{ left: '-9999px', position: 'absolute' }}
-          ref={(input) => setInputEl(input)}
+          ref={(input) => setInputEl(input as HTMLInputElement)}
           data-cy="input-url"
           id="api-url-field"
           label="API URL"
