@@ -37,6 +37,22 @@ This is done by creating an issue and describing how does the feature improve ou
 
 When creating a PR, please explain what it does and make sure to link the relevant issues to it using the Github keywords or through the GUI.
 
+## Dependencies, devDependecies and peerDependencies
+
+- dependencies
+
+We are currently not using `dependencies` directly in our package as it's being represented by the `peerDependencies`. This is because we want to include in the bundle only the relevant files for our library(the components and the types) and reference the needed dependencies inside `peerDependencies`.
+
+- peerDependencies
+
+Inside the `peerDependencies` we want to include the `dependencies` of our project. The whole concept around it is that when a developer installs our package, `npm` needs to know what other dependecies to install inside `node_modules`, without requiring the developer to install it inside it's own app dependencies.
+
+When using an exteral library as a `peerDependency` please make sure to reference it inside `externals` from the `webpack.config.js`.
+
+- devDependencies
+
+While developing, we are primarily using the `devDependencies` to develop the library. Any dependencies that are needed for the development should be added here.
+
 ## Creating components
 
 As GRAS Storybook is strongly related to our npm package and repository `@dhi-gras/react-components`, the process to create components is:
