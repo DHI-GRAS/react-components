@@ -11,11 +11,12 @@ defaults: &defaults
     # install dependencies
     - yarn install
 
+
   # script:
   #   #   ## print all Travis environment variables for debugging
   #   # - $(npm bin)/print-env TRAVIS
   #   # - yarn run start
-  #   - yarn build
+  #   - yarn build:prod
   #   - yarn link
   #   # - yarn run cy:run -- --record --parallel --group $STAGE_NAME
   #   # after all tests finish running we need
@@ -39,6 +40,9 @@ jobs:
     #   env:
     #     - STAGE_NAME="4x-electron on Travis CI"
     #   <<: *defaults
+    - stage: test
+      privder: script
+      script: yarn test
     - stage: build
       provider: script
       script: yarn build:prod
