@@ -1,3 +1,15 @@
+# [1.8.0](https://github.com/DHI-GRAS/react-components/compare/v1.7.0...v1.8.0) (2020-09-01)
+
+
+### Bug Fixes
+
+* **dependencies:** Add peerDependencies to dependencies ([082e3e9](https://github.com/DHI-GRAS/react-components/commit/082e3e9108f472b08d5429e0ff519f195422c9f8))
+
+
+### Features
+
+* **SidebarTitleTest:** Add unit testing for SidebarTitle ([2d72e79](https://github.com/DHI-GRAS/react-components/commit/2d72e79d8aa1a561b2dc302d57c005435f6cdd58))
+
 # [1.7.0](https://github.com/DHI-GRAS/react-components/compare/v1.6.1...v1.7.0) (2020-09-01)
 
 
