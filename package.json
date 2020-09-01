@@ -17,7 +17,7 @@
     "dist",
     "README.md"
   ],
-  "peerDependencies": {
+  "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "env-cmd": "^10.1.0",
@@ -29,6 +29,7 @@
     "react-spinners": "^0.9.0",
     "yup": "^0.29.3"
   },
+  "peerDependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
