@@ -74,11 +74,11 @@ import * as Yup from 'yup';
 //   },
 // ];
 type DynamicFormProps = {
-  disableButtonOnLoad: boolean;
+  disableButtonOnLoad?: boolean;
   fields: Array<object>;
-  validationSchema: any;
+  validationSchema?: any;
   onSubmitForm: Function;
-  title: string;
+  title?: string;
 };
 
 const DynamicForm: React.FC<DynamicFormProps> = ({
