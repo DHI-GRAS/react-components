@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/DHI-GRAS/react-components/compare/v1.8.0...v1.8.1) (2020-09-08)
+
+
+### Bug Fixes
+
+* **logo:** Replace logo src with url ([47a7931](https://github.com/DHI-GRAS/react-components/commit/47a7931b39d8e849706721426e09a02396f568ca))
+
 # [1.8.0](https://github.com/DHI-GRAS/react-components/compare/v1.7.0...v1.8.0) (2020-09-01)
 
 
