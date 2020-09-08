@@ -37,6 +37,22 @@ This is done by creating an issue and describing how does the feature improve ou
 
 When creating a PR, please explain what it does and make sure to link the relevant issues to it using the Github keywords or through the GUI.
 
+## Dependencies, devDependecies and peerDependencies
+
+- dependencies
+
+Inside the `dependencies` we want to include all the production external libraries we are using. The whole concept around it is that when a developer installs our package, `npm` needs to know what other dependecies to install inside `node_modules`, without requiring the developer to install it inside it's own app dependencies.
+
+When using an exteral library as a `dependency` please make sure to reference it inside `externals` from the `webpack.config.js`. This helps by not letting external packages get bundled with ours.
+
+- peerDependencies
+
+The `peerDependencies` are the dependencies that the developers using our package need to install alongside our package.
+
+- devDependencies
+
+While developing, we are primarily using the `devDependencies` to develop the library. Any dependencies that are needed for the development should be added here.
+
 ## Testing
 
 We are creating unit and integration testing using [Jest](https://jestjs.io/) and [Enzyme](https://enzymejs.github.io/enzyme/).
