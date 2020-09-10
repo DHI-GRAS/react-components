@@ -111,9 +111,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
             validationSchema={validationSchema}
             onSubmit={async (values, { setSubmitting }) => {
               await onSubmitForm(values);
-              setTimeout(() => {
-                setSubmitting(false);
-              }, 2000);
+              setSubmitting(false);
             }}
             isInitialValid={!disableButtonOnLoad}
           >

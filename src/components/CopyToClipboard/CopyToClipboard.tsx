@@ -15,11 +15,15 @@ const enabledStyle = {
   cursor: 'pointer',
 };
 
-type CopyToClipboardProps = {
+export type CopyToClipboardProps = {
   disabled?: boolean;
   helperText?: string;
   url?: boolean;
   message?: string;
+};
+
+export const mockCopy: VoidFunction = () => {
+  // call this function
 };
 
 const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
@@ -34,6 +38,7 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
 
   const theme = useTheme();
   const copyAction = () => {
+    mockCopy();
     if (message) {
       setTooltip('Text copied to Clipboard.');
       setTimeout(() => {

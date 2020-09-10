@@ -2,8 +2,9 @@ import 'jsdom-global/register';
 import * as React from 'react';
 import { mount } from 'enzyme';
 import DynamicForm from './DynamicForm';
+import { waitFor } from '@testing-library/dom';
 import { act } from 'react-dom/test-utils';
-jest.useFakeTimers();
+// jest.useFakeTimers();
 const emailField = {
   name: 'email',
   type: 'email',
@@ -24,56 +25,61 @@ const firstnameField = {
   multiline: false,
 };
 describe('Dynamic Form', () => {
-  it('renders the textfield, checks initial values, checks width, adds data and submits', () => {
-    let result = '';
-    let wrap = mount<typeof DynamicForm>(
-      <DynamicForm
-        fields={[emailField, firstnameField]}
-        onSubmitForm={(values) => (result = values)}
-      />
-    );
-    act(() => {
+  act(() => {
+    it('renders the textfield, checks initial values, checks width, adds data and submits', async () => {
+      let wrap = mount<typeof DynamicForm>(
+        <DynamicForm
+          fields={[emailField, firstnameField]}
+          onSubmitForm={(values) => async () => {
+            setTimeout(() => {}, 1000);
+          }}
+        />
+      );
       expect(
         wrap.find('form .MuiGrid-container .MuiGrid-item input').at(0).props()
       ).toHaveProperty('value', '');
       expect(
         wrap.find('form .MuiGrid-container .MuiGrid-item input').at(1).props()
       ).toHaveProperty('value', '');
-    });
-    expect(
-      wrap
-        .find('form .MuiGrid-container .MuiGrid-item')
-        .at(0)
-        .hasClass('MuiGrid-grid-xs-6')
-    ).toBeTruthy();
-    act(() => {
+      expect(
+        wrap
+          .find('form .MuiGrid-container .MuiGrid-item')
+          .at(0)
+          .hasClass('MuiGrid-grid-xs-6')
+      ).toBeTruthy();
       wrap
         .find('form .MuiGrid-container .MuiGrid-item input')
         .first()
         .simulate('change', {
           target: { name: 'email', value: 'email@email.com' },
         });
+      wrap
+        .find('form .MuiGrid-container .MuiGrid-item input')
+        .at(1)
+        .simulate('change', {
+          target: { name: 'firstname', value: 'test' },
+        });
+
+      // wrap.update();
+
+      expect(wrap.find('form .MuiGrid-container .MuiGrid-item')).toHaveLength(
+        2
+      );
+
+      expect(
+        wrap.find('form .MuiGrid-container .MuiGrid-item input').at(1).props()
+      ).toHaveProperty('value', 'test');
+      expect(
+        wrap.find('form .MuiGrid-container .MuiGrid-item input').at(0).props()
+      ).toHaveProperty('value', 'email@email.com');
+      const preventDefault = jest.fn();
+      wrap.find('button').simulate('submit', { preventDefault });
+
+      expect(preventDefault).toHaveBeenCalled();
     });
-    wrap
-      .find('form .MuiGrid-container .MuiGrid-item input')
-      .at(1)
-      .simulate('change', {
-        target: { name: 'firstname', value: 'test' },
-      });
-
-    expect(wrap.find('form .MuiGrid-container .MuiGrid-item')).toHaveLength(2);
-    expect(
-      wrap.find('form .MuiGrid-container .MuiGrid-item input').at(0).props()
-    ).toHaveProperty('value', 'email@email.com');
-    expect(
-      wrap.find('form .MuiGrid-container .MuiGrid-item input').at(1).props()
-    ).toHaveProperty('value', 'test');
-
-    wrap.find('button').simulate('click');
   });
-  // fullWidh
-  // TextField
+
+  // fullWidth
   // Select
   // disableOnLoad
-  // Submit
 });

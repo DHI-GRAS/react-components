@@ -11,7 +11,7 @@ describe('CopyToClipboard', () => {
       <CopyToClipboard message="Hey :)" />
     );
     act(() => {
-      wrap.find('.copy-clipboard').first().simulate('click');
+      wrap.find('.copy-clipboard').first().invoke('onClick');
       jest.runAllTimers();
     });
   });
