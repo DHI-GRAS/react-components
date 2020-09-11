@@ -74,11 +74,11 @@ import * as Yup from 'yup';
 //   },
 // ];
 type DynamicFormProps = {
-  disableButtonOnLoad: boolean;
+  disableButtonOnLoad?: boolean;
   fields: Array<object>;
-  validationSchema: any;
+  validationSchema?: any;
   onSubmitForm: Function;
-  title: string;
+  title?: string;
 };
 
 const DynamicForm: React.FC<DynamicFormProps> = ({
@@ -111,9 +111,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
             validationSchema={validationSchema}
             onSubmit={async (values, { setSubmitting }) => {
               await onSubmitForm(values);
-              setTimeout(() => {
-                setSubmitting(false);
-              }, 2000);
+              setSubmitting(false);
             }}
             isInitialValid={!disableButtonOnLoad}
           >

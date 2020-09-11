@@ -43,6 +43,7 @@ module.exports = {
       react: 'react',
       'react-spinners': 'react-spinners',
       yup: 'yup',
+      'react-clipboard.js': 'react-clipboard.js',
     },
   ],
 };

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Grid, Tooltip, ThemeProvider, TextField } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
+import Clipboard from 'react-clipboard.js';
 const disabledStyle = {
   // borderBottom: '1px solid #cfdbe2',
   color: '#cfdbe2',
@@ -14,11 +15,15 @@ const enabledStyle = {
   cursor: 'pointer',
 };
 
-type CopyToClipboardProps = {
+export type CopyToClipboardProps = {
   disabled?: boolean;
   helperText?: string;
   url?: boolean;
   message?: string;
+};
+
+export const mockCopy: VoidFunction = () => {
+  // call this function
 };
 
 const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
@@ -30,14 +35,10 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
   const [tooltip, setTooltip] = React.useState(
     helperText ? helperText : message ? 'Copy text' : 'Copy URL'
   );
-  const [inputEl, setInputEl] = React.useState(
-    document.createElement('div') as HTMLInputElement
-  );
+
   const theme = useTheme();
   const copyAction = () => {
-    (inputEl.children[1].children[0] as HTMLInputElement).select();
-    document.execCommand('copy');
-
+    mockCopy();
     if (message) {
       setTooltip('Text copied to Clipboard.');
       setTimeout(() => {
@@ -67,25 +68,23 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
       >
         <Grid item style={{ width: 32 }}>
           <Grid container alignItems="center" justify="center">
-            <Tooltip title={tooltip}>
-              <FileCopyOutlinedIcon
-                color="primary"
-                style={{
-                  width: 21,
-                  height: 21,
-                }}
-              />
-            </Tooltip>
+            <Clipboard
+              data-clipboard-text={message ? message : copyUrl}
+              className="copy-clipboard"
+              style={{ background: 'none', border: '0px', outline: 'none' }}
+            >
+              <Tooltip title={tooltip}>
+                <FileCopyOutlinedIcon
+                  color="primary"
+                  style={{
+                    width: 21,
+                    height: 21,
+                  }}
+                />
+              </Tooltip>
+            </Clipboard>
           </Grid>
         </Grid>
-        <TextField
-          style={{ left: '-9999px', position: 'absolute' }}
-          ref={(input) => setInputEl(input as HTMLInputElement)}
-          data-cy="input-url"
-          id="api-url-field"
-          label="API URL"
-          value={message ? message : copyUrl}
-        />
       </Grid>
     </ThemeProvider>
   );
