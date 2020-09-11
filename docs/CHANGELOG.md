@@ -1,3 +1,15 @@
+# [1.9.0](https://github.com/DHI-GRAS/react-components/compare/v1.8.1...v1.9.0) (2020-09-11)
+
+
+### Bug Fixes
+
+* **formik-material-ui:** Upgrade formik to the latest version ([71d2979](https://github.com/DHI-GRAS/react-components/commit/71d2979f24ae12b5236893d9f10272be32888a49))
+
+
+### Features
+
+* **CopyToClipboard:** Add unit testing ([36e80e9](https://github.com/DHI-GRAS/react-components/commit/36e80e953e623330683a6f9453ccf0d749fafe73))
+
 ## [1.8.1](https://github.com/DHI-GRAS/react-components/compare/v1.8.0...v1.8.1) (2020-09-08)
 
 
