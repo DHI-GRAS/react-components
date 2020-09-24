@@ -23,7 +23,7 @@ const mainTitleStyle = {
 //     },
 //   })
 // );
-//
+
 type SidebarTitleProps = {
   title: string;
   titleColor?: string;
