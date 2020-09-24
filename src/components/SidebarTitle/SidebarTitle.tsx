@@ -1,22 +1,29 @@
 import * as React from 'react';
-import { Box, Grid, Typography, ThemeProvider } from '@material-ui/core';
-import {
-  makeStyles,
-  Theme,
-  StyledProps,
-  useTheme,
-} from '@material-ui/core/styles';
+import { Box, Grid, Typography } from '@material-ui/core';
 
-const useStyles = makeStyles<Theme, StyledProps>({
-  container: {
-    padding: 16,
-  },
-  mainTitle: {
-    fontSize: 20,
-    fontWeight: 500,
-    color: '#0b4566',
-  },
-});
+const containerStyle = {
+  padding: 16,
+};
+
+const mainTitleStyle = {
+  fontSize: 20,
+  fontWeight: 500,
+  // color: '#0b4566',
+};
+
+// const useStyles = makeStyles((theme: Theme) =>
+//   createStyles({
+//     container: {
+//       padding: 16,
+//     },
+//     mainTitle: {
+//       fontSize: 20,
+//       fontWeight: 500,
+//       color: '#0b4566',
+//     },
+//   })
+// );
+
 type SidebarTitleProps = {
   title: string;
   titleColor?: string;
@@ -39,51 +46,47 @@ const SidebarTitle: React.FC<SidebarTitleProps> = ({
   bottomBorderSize,
   bottomBorderColor,
 }) => {
-  const classes = useStyles({} as StyledProps);
-  const theme: Theme = useTheme();
+  // const classes = useStyles({} as StyledProps);
   return (
-    <ThemeProvider theme={theme}>
-      <Box
-        className={classes.container}
-        style={{
-          backgroundColor,
-          borderBottom: `${bottomBorderSize}px solid ${bottomBorderColor}`,
-        }}
-      >
-        <Grid container spacing={0} justify="space-between">
-          <Grid item xs={10}>
-            <Typography
-              className={classes.mainTitle}
-              style={{ color: titleColor }}
-              variant={'h2'}
-            >
-              {title}
-            </Typography>
-          </Grid>
-          {image && (
-            <Grid item>
-              <img src={image} alt="DHI Logo" style={{ width: imageWidth }} />
-            </Grid>
-          )}
+    <Box
+      style={{
+        backgroundColor,
+        borderBottom: `${bottomBorderSize}px solid ${bottomBorderColor}`,
+        ...containerStyle,
+      }}
+    >
+      <Grid container spacing={0} justify="space-between">
+        <Grid item xs={10}>
+          <Typography
+            style={{ color: titleColor, ...mainTitleStyle }}
+            variant={'h2'}
+          >
+            {title}
+          </Typography>
         </Grid>
-        {(subTitle || subTitle.length > 0) && (
-          <>
-            {subTitle.map((text: string, index: number) => {
-              return (
-                <Typography
-                  key={`subtitle-${index}`}
-                  style={{ color: subTitleColor }}
-                  color="secondary"
-                  variant="h4"
-                >
-                  {text}
-                </Typography>
-              );
-            })}
-          </>
+        {image && (
+          <Grid item>
+            <img src={image} alt="DHI Logo" style={{ width: imageWidth }} />
+          </Grid>
         )}
-      </Box>
-    </ThemeProvider>
+      </Grid>
+      {(subTitle || subTitle.length > 0) && (
+        <>
+          {subTitle.map((text: string, index: number) => {
+            return (
+              <Typography
+                key={`subtitle-${index}`}
+                style={{ color: subTitleColor }}
+                color="secondary"
+                variant="h4"
+              >
+                {text}
+              </Typography>
+            );
+          })}
+        </>
+      )}
+    </Box>
   );
 };
 
