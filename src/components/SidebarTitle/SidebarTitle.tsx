@@ -9,6 +9,7 @@ const mainTitleStyle = {
   fontSize: 20,
   fontWeight: 500,
   // color: '#0b4566',
+  //
 };
 
 // const useStyles = makeStyles((theme: Theme) =>
