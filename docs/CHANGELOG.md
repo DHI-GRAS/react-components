@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/DHI-GRAS/react-components/compare/v1.9.0...v1.9.1) (2020-09-24)
+
+
+### Bug Fixes
+
+* **styling:** Trigger a release ([d82917f](https://github.com/DHI-GRAS/react-components/commit/d82917ff79e4a189ec607195b99c33971fbf30a9))
+
 # [1.9.0](https://github.com/DHI-GRAS/react-components/compare/v1.8.1...v1.9.0) (2020-09-11)
 
 
