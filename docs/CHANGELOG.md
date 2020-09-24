@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/DHI-GRAS/react-components/compare/v1.9.1...v1.9.2) (2020-09-24)
+
+
+### Bug Fixes
+
+* **Icons-color:** Add color to icons ([73ab296](https://github.com/DHI-GRAS/react-components/commit/73ab296f2f1b1d311bcba4e8446a6cc73f3523f2))
+
 ## [1.9.1](https://github.com/DHI-GRAS/react-components/compare/v1.9.0...v1.9.1) (2020-09-24)
 
 
