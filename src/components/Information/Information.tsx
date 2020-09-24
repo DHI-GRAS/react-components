@@ -36,10 +36,11 @@ const panels = [
     component: Terms,
   },
 ];
-
+const colorIcon = {
+  color: '#0b4566',
+};
 const Information: React.FC = () => {
   const [expanded, setExpanded] = React.useState('');
-  const theme: Theme = useTheme();
   const handleChange = (panel) => (e, isExpanded) => {
     setExpanded(isExpanded ? panel : '');
   };
@@ -56,7 +57,7 @@ const Information: React.FC = () => {
             expandIcon={
               <ExpandMoreIcon
                 style={{
-                  color: theme.palette.primary.main,
+                  ...colorIcon,
                   padding: 4,
                   width: '16px',
                 }}
