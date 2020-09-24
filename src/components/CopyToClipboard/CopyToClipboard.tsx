@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Grid, Tooltip, ThemeProvider, TextField } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Grid, Tooltip } from '@material-ui/core';
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 import Clipboard from 'react-clipboard.js';
 const disabledStyle = {
@@ -13,6 +12,10 @@ const enabledStyle = {
   // borderBottom: '1px solid #0b4566',
   color: '#0b4566',
   cursor: 'pointer',
+};
+
+const copyIcon = {
+  color: '#0b4566',
 };
 
 export type CopyToClipboardProps = {
@@ -36,9 +39,8 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
     helperText ? helperText : message ? 'Copy text' : 'Copy URL'
   );
 
-  const theme = useTheme();
   const copyAction = () => {
-    mockCopy();
+    // mockCopy();
     if (message) {
       setTooltip('Text copied to Clipboard.');
       setTimeout(() => {
@@ -57,36 +59,34 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Grid
-        container
-        spacing={0}
-        justify="space-between"
-        alignItems="flex-end"
-        style={disabled === true ? disabledStyle : enabledStyle}
-        onClick={() => copy()}
-      >
-        <Grid item style={{ width: 32 }}>
-          <Grid container alignItems="center" justify="center">
-            <Clipboard
-              data-clipboard-text={message ? message : copyUrl}
-              className="copy-clipboard"
-              style={{ background: 'none', border: '0px', outline: 'none' }}
-            >
-              <Tooltip title={tooltip}>
-                <FileCopyOutlinedIcon
-                  color="primary"
-                  style={{
-                    width: 21,
-                    height: 21,
-                  }}
-                />
-              </Tooltip>
-            </Clipboard>
-          </Grid>
+    <Grid
+      container
+      spacing={0}
+      justify="space-between"
+      alignItems="flex-end"
+      style={disabled === true ? disabledStyle : enabledStyle}
+      onClick={() => copy()}
+    >
+      <Grid item style={{ width: 32 }}>
+        <Grid container alignItems="center" justify="center">
+          <Clipboard
+            data-clipboard-text={message ? message : copyUrl}
+            className="copy-clipboard"
+            style={{ background: 'none', border: '0px', outline: 'none' }}
+          >
+            <Tooltip title={tooltip}>
+              <FileCopyOutlinedIcon
+                style={{
+                  width: 21,
+                  height: 21,
+                  ...copyIcon,
+                }}
+              />
+            </Tooltip>
+          </Clipboard>
         </Grid>
       </Grid>
-    </ThemeProvider>
+    </Grid>
   );
 };
 

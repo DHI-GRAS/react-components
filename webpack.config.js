@@ -33,7 +33,6 @@ module.exports = {
     ],
   },
   externals: [
-    /@material-ui\/(core|icons)\/.*/,
     {
       'env-cmd': 'env-cmd',
       formik: 'formik',
@@ -44,14 +43,8 @@ module.exports = {
       'react-spinners': 'react-spinners',
       yup: 'yup',
       'react-clipboard.js': 'react-clipboard.js',
+      '@material-ui/icons': '@material-ui/icons',
+      '@material-ui/core': '@material-ui/core',
     },
   ],
 };
-
-// function externalForMaterialUi(context, request, callback) {
-//   if (/@material-ui.+/.test(request)) {
-//     const name = request.replace(/^.*[\\/]/, '');
-//     return callback(null, 'root MaterialUI.' + name);
-//   }
-//   callback();
-// }

@@ -5,7 +5,6 @@ import {
   AccordionDetails,
   AccordionSummary,
   Typography,
-  ThemeProvider,
 } from '@material-ui/core';
 import { useTheme, Theme } from '@material-ui/core/styles';
 import { About, Contact, Disclaimer, FAQ, Privacy, Terms } from './partials';
@@ -46,38 +45,36 @@ const Information: React.FC = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Box>
-        {panels.map(({ title, component: Component }) => (
-          <Accordion
-            key={title}
-            expanded={expanded === title}
-            onChange={handleChange(title)}
+    <Box>
+      {panels.map(({ title, component: Component }) => (
+        <Accordion
+          key={title}
+          expanded={expanded === title}
+          onChange={handleChange(title)}
+        >
+          <AccordionSummary
+            expandIcon={
+              <ExpandMoreIcon
+                style={{
+                  color: theme.palette.primary.main,
+                  padding: 4,
+                  width: '16px',
+                }}
+              />
+            }
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
           >
-            <AccordionSummary
-              expandIcon={
-                <ExpandMoreIcon
-                  style={{
-                    color: theme.palette.primary.main,
-                    padding: 4,
-                    width: '16px',
-                  }}
-                />
-              }
-              aria-controls="panel1bh-content"
-              id="panel1bh-header"
-            >
-              <Typography variant="h5" style={{ fontSize: 12 }}>
-                {title}
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Component />
-            </AccordionDetails>
-          </Accordion>
-        ))}
-      </Box>
-    </ThemeProvider>
+            <Typography variant="h5" style={{ fontSize: 12 }}>
+              {title}
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Component />
+          </AccordionDetails>
+        </Accordion>
+      ))}
+    </Box>
   );
 };
 

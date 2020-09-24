@@ -18,19 +18,21 @@
     "README.md"
   ],
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/core": "^4.11.0",
     "env-cmd": "^10.1.0",
     "formik": "^2.1.5",
     "formik-material-ui": "^3.0.0",
     "prop-types": "^15.7.2",
-    "react": "16.13.1",
     "react-clipboard.js": "^2.0.16",
-    "react-dom": "^16.13.1",
     "react-spinners": "^0.9.0",
-    "yup": "^0.29.3"
+    "yup": "^0.29.3",
+    "tiny-warning": "^1.0.3"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react-dom": "^16.13.1",
+    "react": "16.13.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
@@ -52,6 +54,7 @@
     "@types/prettier": "^2.1.0",
     "@types/react": "^16.9.47",
     "@types/react-dom": "^16.9.8",
+    "@types/yup": "^0.29.7",
     "babel-loader": "^8.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "css-loader": "^4.2.1",
