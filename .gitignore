@@ -11,7 +11,6 @@ __snapshots__
 
 # production
 /build
-dist
 # misc
 .DS_Store
 .env.local
