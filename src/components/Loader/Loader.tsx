@@ -20,12 +20,15 @@ const majorLoadingStyle: CSSProperties = {
   color: 'white',
 };
 
-type LoaderProps = {
+export type LoaderProps = {
   isLoading?: boolean;
   isMajorLoading?: boolean;
 };
 
-const Loader: React.FC<LoaderProps> = ({ isMajorLoading = false }) => {
+const Loader: React.FC<LoaderProps> = ({
+  isLoading = false,
+  isMajorLoading = false,
+}) => {
   return (
     <>
       {isMajorLoading ? (
@@ -38,9 +41,11 @@ const Loader: React.FC<LoaderProps> = ({ isMajorLoading = false }) => {
           <CircularProgress color="inherit" size={50} thickness={5} />
         </Grid>
       ) : (
-        <div style={{ ...minorLoadingStyle }}>
-          <LinearProgress color="primary" />
-        </div>
+        isLoading && (
+          <div style={{ ...minorLoadingStyle }}>
+            <LinearProgress color="primary" />
+          </div>
+        )
       )}
     </>
   );
