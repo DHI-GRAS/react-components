@@ -1,3 +1,16 @@
+# [1.10.0](https://github.com/DHI-GRAS/react-components/compare/v1.9.2...v1.10.0) (2020-09-25)
+
+
+### Bug Fixes
+
+* **Loader:** Change flow of conditionals ([887d301](https://github.com/DHI-GRAS/react-components/commit/887d301c6704186d2153f038a17830a75a517384))
+
+
+### Features
+
+* **Loader:** Add Loader component ([d4d58dd](https://github.com/DHI-GRAS/react-components/commit/d4d58ddcb593afabb444a3f435ee4066f4ccbefa))
+* **Slider:** Add Slider component ([8c3d0c5](https://github.com/DHI-GRAS/react-components/commit/8c3d0c587d413e3ed962b467645f210f1bf0cc13))
+
 ## [1.9.2](https://github.com/DHI-GRAS/react-components/compare/v1.9.1...v1.9.2) (2020-09-24)
 
 
