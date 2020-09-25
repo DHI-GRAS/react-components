@@ -33,6 +33,7 @@ module.exports = {
     ],
   },
   externals: [
+    /^\@material\-ui\/icons\/.*/,
     {
       'env-cmd': 'env-cmd',
       formik: 'formik',
