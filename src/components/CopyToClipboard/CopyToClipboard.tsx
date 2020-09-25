@@ -14,10 +14,6 @@ const enabledStyle = {
   cursor: 'pointer',
 };
 
-const copyIcon = {
-  color: '#0b4566',
-};
-
 export type CopyToClipboardProps = {
   disabled?: boolean;
   helperText?: string;
@@ -76,10 +72,10 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
           >
             <Tooltip title={tooltip}>
               <FileCopyOutlinedIcon
+                color="primary"
                 style={{
                   width: 21,
                   height: 21,
-                  ...copyIcon,
                 }}
               />
             </Tooltip>

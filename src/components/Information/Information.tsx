@@ -6,7 +6,6 @@ import {
   AccordionSummary,
   Typography,
 } from '@material-ui/core';
-import { useTheme, Theme } from '@material-ui/core/styles';
 import { About, Contact, Disclaimer, FAQ, Privacy, Terms } from './partials';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const panels = [
@@ -36,9 +35,7 @@ const panels = [
     component: Terms,
   },
 ];
-const colorIcon = {
-  color: '#0b4566',
-};
+
 const Information: React.FC = () => {
   const [expanded, setExpanded] = React.useState('');
   const handleChange = (panel) => (e, isExpanded) => {
@@ -56,8 +53,8 @@ const Information: React.FC = () => {
           <AccordionSummary
             expandIcon={
               <ExpandMoreIcon
+                color="primary"
                 style={{
-                  ...colorIcon,
                   padding: 4,
                   width: '16px',
                 }}
