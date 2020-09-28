@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/DHI-GRAS/react-components/compare/v1.10.1...v1.10.2) (2020-09-28)
+
+
+### Bug Fixes
+
+* **Slider:** Fix styling by passing noWrap option ([c34a2ab](https://github.com/DHI-GRAS/react-components/commit/c34a2ab58d3b15580e1c9f4df35b12c9319b01f2))
+
 ## [1.10.1](https://github.com/DHI-GRAS/react-components/compare/v1.10.0...v1.10.1) (2020-09-25)
 
 
