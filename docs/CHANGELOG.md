@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/DHI-GRAS/react-components/compare/v1.10.0...v1.10.1) (2020-09-25)
+
+
+### Bug Fixes
+
+* **dist:** Add dist folder back ([cc16b35](https://github.com/DHI-GRAS/react-components/commit/cc16b3596245a0fe552a8a4b0c20dca5059d5a83))
+
 # [1.10.0](https://github.com/DHI-GRAS/react-components/compare/v1.9.2...v1.10.0) (2020-09-25)
 
 
