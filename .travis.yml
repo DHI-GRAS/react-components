@@ -11,35 +11,8 @@ defaults: &defaults
     # install dependencies
     - yarn install
 
-
-  # script:
-  #   #   ## print all Travis environment variables for debugging
-  #   # - $(npm bin)/print-env TRAVIS
-  #   # - yarn run start
-  #   - yarn build:prod
-  #   - yarn link
-  #   # - yarn run cy:run -- --record --parallel --group $STAGE_NAME
-  #   # after all tests finish running we need
-  #   # to kill all background jobs (like "npm start &")
-  #   - kill $(jobs -p) || true
-
 jobs:
   include:
-    # # we have multiple jobs to execute using just a single stage
-    # # but we can pass group name via environment variable to Cypress test runner
-    # - stage: test
-    #   env:
-    #     - STAGE_NAME="1x-electron on Travis CI"
-    #   <<: *defaults
-    # # run tests in parallel by including several test jobs with same name variable
-    # - stage: test
-    #   env:
-    #     - STAGE_NAME="4x-electron on Travis CI"
-    #   <<: *defaults
-    # - stage: test
-    #   env:
-    #     - STAGE_NAME="4x-electron on Travis CI"
-    #   <<: *defaults
     - stage: test
       privder: script
       script: yarn test
@@ -53,11 +26,3 @@ jobs:
         provider: script
         skip_cleanup: true
         script: yarn run semantic-release
-    # - stage: test
-    #   env:
-    #     - STAGE_NAME="4x-electron on Travis CI"
-    #   <<: *defaults
-    # - stage: test
-    #   env:
-    #     - STAGE_NAME="4x-electron on Travis CI"
-    #   <<: *defaults
