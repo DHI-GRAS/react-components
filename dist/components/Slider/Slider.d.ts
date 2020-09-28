@@ -11,7 +11,7 @@ declare type SliderProps = {
     /**
      * Get the value while using the slider thumb.
      */
-    getValue: (val: number | number[]) => {};
+    getValue?: (val: number | number[]) => {};
     /**
      * Get the value once you release the slider thumb.
      */
