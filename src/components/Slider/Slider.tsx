@@ -44,7 +44,13 @@ const Slider: React.FC<SliderProps> = ({
   };
 
   return (
-    <Grid container direction="row" alignItems="center" justify="center">
+    <Grid
+      container
+      direction="row"
+      alignItems="center"
+      justify="center"
+      wrap="nowrap"
+    >
       {title && (
         <Box>
           <Grid
