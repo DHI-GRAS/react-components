@@ -1,3 +1,10 @@
+## [1.10.5](https://github.com/DHI-GRAS/react-components/compare/v1.10.4...v1.10.5) (2020-09-28)
+
+
+### Bug Fixes
+
+* **Slider:** publish latest changes ([7f4e44e](https://github.com/DHI-GRAS/react-components/commit/7f4e44e25809e305de7c0ea678fd126662dd5a3b))
+
 ## [1.10.4](https://github.com/DHI-GRAS/react-components/compare/v1.10.3...v1.10.4) (2020-09-28)
 
 
