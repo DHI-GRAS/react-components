@@ -1,3 +1,10 @@
+## [1.10.6](https://github.com/DHI-GRAS/react-components/compare/v1.10.5...v1.10.6) (2020-09-28)
+
+
+### Bug Fixes
+
+* **Slider:** Remove maxWidth style for slider ([6f12135](https://github.com/DHI-GRAS/react-components/commit/6f121352677b15475d6202f6a3c404c0212a729f))
+
 ## [1.10.5](https://github.com/DHI-GRAS/react-components/compare/v1.10.4...v1.10.5) (2020-09-28)
 
 
