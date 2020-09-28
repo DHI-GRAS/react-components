@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/DHI-GRAS/react-components/compare/v1.10.2...v1.10.3) (2020-09-28)
+
+
+### Bug Fixes
+
+* **workflow:** add refs for npm publish ([2f46fa1](https://github.com/DHI-GRAS/react-components/commit/2f46fa1680bed84e4c757a6eaa768ea077d90fb6))
+
 ## [1.10.2](https://github.com/DHI-GRAS/react-components/compare/v1.10.1...v1.10.2) (2020-09-28)
 
 
