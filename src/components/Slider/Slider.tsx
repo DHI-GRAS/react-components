@@ -13,7 +13,7 @@ type SliderProps = {
   /**
    * Get the value while using the slider thumb.
    */
-  getValue: (val: number | number[]) => {};
+  getValue?: (val: number | number[]) => {};
   /**
    * Get the value once you release the slider thumb.
    */
@@ -40,7 +40,7 @@ const Slider: React.FC<SliderProps> = ({
 
   const handleChange = (newValue) => {
     setValue(newValue);
-    getValue(newValue);
+    getValue && getValue(newValue);
   };
 
   return (
