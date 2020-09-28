@@ -1,3 +1,10 @@
+## [1.10.4](https://github.com/DHI-GRAS/react-components/compare/v1.10.3...v1.10.4) (2020-09-28)
+
+
+### Bug Fixes
+
+* **Slider:** make getValue optional ([69a1771](https://github.com/DHI-GRAS/react-components/commit/69a1771e50b3560af6ff18786fb4896ae1db052d))
+
 ## [1.10.3](https://github.com/DHI-GRAS/react-components/compare/v1.10.2...v1.10.3) (2020-09-28)
 
 
