@@ -79,7 +79,7 @@ const Slider: React.FC<SliderProps> = ({
       )}
 
       <MSlider
-        style={{ maxWidth: '85%', margin: '0rem .6rem' }}
+        style={{ margin: '0rem .6rem' }}
         value={value}
         min={min}
         step={step}
