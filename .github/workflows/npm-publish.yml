@@ -24,7 +24,6 @@ jobs:
         with:
           commit_message: Commit latest build
           branch: master
-  #       - run: npm test
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
