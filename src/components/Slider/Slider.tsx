@@ -3,9 +3,9 @@ import { Slider as MSlider, Box, Grid, Typography } from '@material-ui/core';
 
 type SliderProps = {
   /**
-   * Default values of the slider in format `[min, max]`.
+   * Default values of the slider in format `[min, max]` or `number`.
    */
-  defaultValue: number[];
+  defaultValue: number[] | number;
   title?: string | undefined;
   min?: number | undefined;
   max?: number | undefined;
@@ -23,6 +23,10 @@ type SliderProps = {
    */
   sliderMarginLeft?: number | undefined;
   noNumbers?: boolean | undefined;
+  /**
+   * Append a symbol at the end of the values. (%, /10, £, $)
+   */
+  symbol?: string | undefined;
 };
 
 const Slider: React.FC<SliderProps> = ({
@@ -35,6 +39,7 @@ const Slider: React.FC<SliderProps> = ({
   getValueCommitted,
   sliderMarginLeft = 1,
   noNumbers = false,
+  symbol = '',
 }) => {
   const [value, setValue] = React.useState(defaultValue);
 
@@ -65,7 +70,7 @@ const Slider: React.FC<SliderProps> = ({
           </Grid>
         </Box>
       )}
-      {!noNumbers && (
+      {!noNumbers && typeof value[0] === 'number' && (
         <Box style={{ marginLeft: title ? `${sliderMarginLeft}rem` : '0rem' }}>
           <Grid
             container
@@ -73,7 +78,7 @@ const Slider: React.FC<SliderProps> = ({
             justify="center"
             style={{ height: '100%', width: '2rem' }}
           >
-            <Typography variant="body2">{value[0]}</Typography>
+            <Typography variant="body2">{value[0] + symbol}</Typography>
           </Grid>
         </Box>
       )}
@@ -99,7 +104,9 @@ const Slider: React.FC<SliderProps> = ({
             justify="center"
             style={{ height: '100%', width: '2rem' }}
           >
-            <Typography variant="body2">{value[1]}</Typography>
+            <Typography variant="body2">
+              {`${value[1] || value}${symbol}`}
+            </Typography>
           </Grid>
         </Box>
       )}

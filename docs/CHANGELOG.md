@@ -1,3 +1,11 @@
+## [1.10.7](https://github.com/DHI-GRAS/react-components/compare/v1.10.6...v1.10.7) (2020-09-29)
+
+
+### Bug Fixes
+
+* **Slider:** Add option for passin one value and for symbol ([4d4a726](https://github.com/DHI-GRAS/react-components/commit/4d4a726ad4711988247353b5c62651746a1f07cf))
+* **workflow:** Update the CI/CD environment ([f864282](https://github.com/DHI-GRAS/react-components/commit/f86428249a3c8de7f02210c37f04ae84fac2989e))
+
 ## [1.10.6](https://github.com/DHI-GRAS/react-components/compare/v1.10.5...v1.10.6) (2020-09-28)
 
 
