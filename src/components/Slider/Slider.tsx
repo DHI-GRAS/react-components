@@ -13,11 +13,11 @@ type SliderProps = {
   /**
    * Get the value while using the slider thumb.
    */
-  getValue?: (val: number | number[]) => {};
+  getValue?: (val: number | number[]) => void;
   /**
    * Get the value once you release the slider thumb.
    */
-  getValueCommitted?: (val: number | number[]) => {};
+  getValueCommitted?: (val: number | number[]) => void;
   /**
    * *Requires `title` prop. Counted in `rem` units.
    */
