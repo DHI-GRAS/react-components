@@ -1,3 +1,15 @@
+# [1.11.0](https://github.com/DHI-GRAS/react-components/compare/v1.10.7...v1.11.0) (2020-09-30)
+
+
+### Bug Fixes
+
+* **Slider:** Change prop symbol into value ([556159c](https://github.com/DHI-GRAS/react-components/commit/556159c25e3590b2e072bf3e1230a9dd961d036e))
+
+
+### Features
+
+* **Legend:** Add Legend component ([b0e30d2](https://github.com/DHI-GRAS/react-components/commit/b0e30d2762e1c6f7e591fccef0c71d7217c97ba1))
+
 ## [1.10.7](https://github.com/DHI-GRAS/react-components/compare/v1.10.6...v1.10.7) (2020-09-29)
 
 
