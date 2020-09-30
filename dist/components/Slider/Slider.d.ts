@@ -11,20 +11,20 @@ declare type SliderProps = {
     /**
      * Get the value while using the slider thumb.
      */
-    getValue?: (val: number | number[]) => {};
+    getValue?: (val: number | number[]) => void;
     /**
      * Get the value once you release the slider thumb.
      */
-    getValueCommitted?: (val: number | number[]) => {};
+    getValueCommitted?: (val: number | number[]) => void;
     /**
      * *Requires `title` prop. Counted in `rem` units.
      */
     sliderMarginLeft?: number | undefined;
     noNumbers?: boolean | undefined;
     /**
-     * Append a symbol at the end of the values. (%, /10, £, $)
+     * Append a unit at the end of the values. (%, /10, £, $)
      */
-    symbol?: string | undefined;
+    unit?: string | undefined;
 };
 declare const Slider: React.FC<SliderProps>;
 export default Slider;
