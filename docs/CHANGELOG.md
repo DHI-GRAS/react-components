@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/DHI-GRAS/react-components/compare/v1.11.0...v1.11.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* **Legend:** Add description for porps ([9a52e71](https://github.com/DHI-GRAS/react-components/commit/9a52e71ed4015a5f0363de629b6a0591a6b8b3a5))
+
 # [1.11.0](https://github.com/DHI-GRAS/react-components/compare/v1.10.7...v1.11.0) (2020-09-30)
 
 
