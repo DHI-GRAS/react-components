@@ -13,20 +13,20 @@ type SliderProps = {
   /**
    * Get the value while using the slider thumb.
    */
-  getValue?: (val: number | number[]) => {};
+  getValue?: (val: number | number[]) => void;
   /**
    * Get the value once you release the slider thumb.
    */
-  getValueCommitted?: (val: number | number[]) => {};
+  getValueCommitted?: (val: number | number[]) => void;
   /**
    * *Requires `title` prop. Counted in `rem` units.
    */
   sliderMarginLeft?: number | undefined;
   noNumbers?: boolean | undefined;
   /**
-   * Append a symbol at the end of the values. (%, /10, £, $)
+   * Append a unit at the end of the values. (%, /10, £, $)
    */
-  symbol?: string | undefined;
+  unit?: string | undefined;
 };
 
 const Slider: React.FC<SliderProps> = ({
@@ -39,7 +39,7 @@ const Slider: React.FC<SliderProps> = ({
   getValueCommitted,
   sliderMarginLeft = 1,
   noNumbers = false,
-  symbol = '',
+  unit = '',
 }) => {
   const [value, setValue] = React.useState(defaultValue);
 
@@ -78,7 +78,7 @@ const Slider: React.FC<SliderProps> = ({
             justify="center"
             style={{ height: '100%', width: '2rem' }}
           >
-            <Typography variant="body2">{value[0] + symbol}</Typography>
+            <Typography variant="body2">{value[0] + unit}</Typography>
           </Grid>
         </Box>
       )}
@@ -105,7 +105,7 @@ const Slider: React.FC<SliderProps> = ({
             style={{ height: '100%', width: '2rem' }}
           >
             <Typography variant="body2">
-              {`${value[1] || value}${symbol}`}
+              {`${value[1] || value}${unit}`}
             </Typography>
           </Grid>
         </Box>
