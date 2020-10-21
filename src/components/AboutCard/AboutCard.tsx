@@ -22,18 +22,9 @@ const useStyles = makeStyles({
 
 export type AboutCardProps = {
   title: string;
-  /**
-   * .
-   */
   description?: string;
-  /**
-   * .
-   */
   descriptionTitle?: string;
-  /**
-   *
-   */
-  children?: string | undefined;
+  children?: React.ReactNode | undefined;
 };
 
 const AboutCard: React.FC<AboutCardProps> = ({
