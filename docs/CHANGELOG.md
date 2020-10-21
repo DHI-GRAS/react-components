@@ -1,3 +1,11 @@
+# [1.12.0](https://github.com/DHI-GRAS/react-components/compare/v1.11.1...v1.12.0) (2020-10-21)
+
+
+### Features
+
+* **about-card:** add AboutCard component, props and types ([77a8dab](https://github.com/DHI-GRAS/react-components/commit/77a8dab3a6253ecfb0e713850c5600c453e6c18c))
+* **about-card:** add test for AboutCard component and define children as ReactNode ([ffb7ccb](https://github.com/DHI-GRAS/react-components/commit/ffb7ccb8e6a5e82defb9003fcf58bd199e045ece))
+
 ## [1.11.1](https://github.com/DHI-GRAS/react-components/compare/v1.11.0...v1.11.1) (2020-09-30)
 
 
