@@ -1,92 +1,88 @@
 import * as React from 'react';
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Box, Grid, IconButton, Tooltip, makeStyles } from '@material-ui/core';
+import {
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
+  ExpandLess as ExpandLessIcon,
+  ExpandMore as ExpandMoreIcon,
+} from '@material-ui/icons';
 
-const containerStyle = {
-  padding: 16,
-};
+export const useStyle = makeStyles({
+  icon: {
+    backgroundColor: '#fff',
+    height: 22,
+  },
+  activeIcon: {
+    backgroundColor: '#0b4566',
+    '& path': {
+      fill: '#fff',
+    },
+  },
+});
 
-const mainTitleStyle = {
-  fontSize: 20,
-  fontWeight: 500,
-  // color: '#0b4566',
-  //
-};
-
-// const useStyles = makeStyles((theme: Theme) =>
-//   createStyles({
-//     container: {
-//       padding: 16,
-//     },
-//     mainTitle: {
-//       fontSize: 20,
-//       fontWeight: 500,
-//       color: '#0b4566',
-//     },
-//   })
-// );
+const icons: Array<{ id: number; component: React.FC; tooltip: string }> = [
+  // {
+  //   id: 1,
+  //   component: ExpandMoreIcon,
+  //   tooltip: "Information",
+  // },
+];
 
 type SidebarControlProps = {
-  title: string;
-  titleColor?: string;
-  subTitle?: Array<string>;
-  subTitleColor?: string;
-  image?: string;
-  imageWidth?: number;
-  backgroundColor?: string;
-  bottomBorderSize?: string | number;
-  bottomBorderColor?: string;
+  handleToggleSidebar?: () => void;
+  mobile?: boolean;
+  openSidebar?: boolean;
 };
+
 const SidebarControl: React.FC<SidebarControlProps> = ({
-  title = 'Current title',
-  subTitle = [''],
-  image,
-  imageWidth = 38,
-  backgroundColor = '#FFFFFF',
-  titleColor = '#0b4566',
-  subTitleColor = '#86a2b3',
-  bottomBorderSize,
-  bottomBorderColor,
+  handleToggleSidebar,
+  mobile = false,
+  openSidebar,
 }) => {
-  // const classes = useStyles({} as StyledProps);
+  const classes = useStyle();
+  const [tab, setTab] = React.useState<number | undefined>();
+
   return (
     <Box
-      style={{
-        backgroundColor,
-        borderBottom: `${bottomBorderSize}px solid ${bottomBorderColor}`,
-        ...containerStyle,
-      }}
+      flexGrow={1}
+      display="flex"
+      flexDirection={mobile === true ? 'row' : 'column'}
+      style={{ overflowY: 'auto', height: '100%' }}
     >
-      <Grid container spacing={0} justify="space-between">
-        <Grid item xs={10}>
-          <Typography
-            style={{ color: titleColor, ...mainTitleStyle }}
-            variant={'h2'}
-          >
-            {title}
-          </Typography>
-        </Grid>
-        {image && (
-          <Grid item>
-            <img src={image} alt="DHI Logo" style={{ width: imageWidth }} />
-          </Grid>
-        )}
+      <Box>
+        <IconButton
+          onClick={handleToggleSidebar}
+          style={{ backgroundColor: '#fff' }}
+        >
+          {openSidebar === true && mobile !== true && (
+            <ChevronRightIcon className={classes.icon} color="primary" />
+          )}
+          {openSidebar === false && mobile !== true && (
+            <ChevronLeftIcon className={classes.icon} color="primary" />
+          )}
+          {openSidebar === true && mobile === true && (
+            <ExpandMoreIcon className={classes.icon} color="primary" />
+          )}
+          {openSidebar === false && mobile === true && (
+            <ExpandLessIcon className={classes.icon} color="primary" />
+          )}
+        </IconButton>
+      </Box>
+      <Grid
+        container
+        direction="column"
+        justify="center"
+        alignItems="center"
+        style={{ height: 'calc(100% - 72px)' }}
+      >
+        {icons.map(({ id, component: Component, tooltip }) => (
+          <Tooltip placement="left" key={id} title={tooltip}>
+            <IconButton onClick={() => setTab(id)}>
+              <Component />
+            </IconButton>
+          </Tooltip>
+        ))}
       </Grid>
-      {(subTitle || subTitle.length > 0) && (
-        <>
-          {subTitle.map((text: string, index: number) => {
-            return (
-              <Typography
-                key={`subtitle-${index}`}
-                style={{ color: subTitleColor }}
-                color="secondary"
-                variant="h4"
-              >
-                {text}
-              </Typography>
-            );
-          })}
-        </>
-      )}
     </Box>
   );
 };
