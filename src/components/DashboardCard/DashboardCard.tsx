@@ -51,22 +51,22 @@ const useStyles = makeStyles((theme) => ({
 export type DashboardCardProps = {
   children?: React.ReactNode | undefined;
   description?: string;
-  disabled;
-  headerChildren: React.ReactNode | undefined;
-  style: any;
+  disabled?: boolean;
+  headerChildren?: React.ReactNode | undefined;
+  style?: any;
   title: string;
 };
 
 const DashboardCard: React.FC<DashboardCardProps> = ({
   children,
   description,
-  disabled,
+  disabled = false,
   headerChildren,
   style,
   title,
 }) => {
-  const [expand, setExpand] = React.useState(false);
   const classes = useStyles();
+  const [expand, setExpand] = React.useState(false);
 
   const expandCard = () => {
     setExpand(!expand);
