@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { Box, Typography, makeStyles } from '@material-ui/core';
 import AspectRatioIcon from '@material-ui/icons/AspectRatio';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   cardHeader: {
     backgroundColor: '#FFFFFF',
     borderBottom: '1px solid #DBE4E9',
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     left: 0,
   },
-}));
+});
 
 export type DashboardCardProps = {
   children?: React.ReactNode | undefined;
@@ -66,7 +66,7 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
   title,
 }) => {
   const classes = useStyles();
-  const [expand, setExpand] = React.useState(false);
+  const [expand, setExpand] = React.useState<boolean | undefined>(false);
 
   const expandCard = () => {
     setExpand(!expand);
@@ -91,9 +91,9 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
       >
         <Box mr={2}>
           <Typography
-            variant="subtitle1"
-            style={{ fontSize: 16 }}
             color="primary"
+            style={{ fontSize: 16 }}
+            variant="subtitle1"
           >
             {title}
           </Typography>
