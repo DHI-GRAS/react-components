@@ -1,51 +1,119 @@
-import * as React from 'react';
-import {
-  Card as CardMUI,
-  CardContent,
-  Typography,
-  makeStyles,
-} from '@material-ui/core';
+import React from 'react';
+import { Box, Typography, makeStyles } from '@material-ui/core';
+import AspectRatioIcon from '@material-ui/icons/AspectRatio';
 
-const useStyles = makeStyles({
-  card: {
-    borderRadius: 4,
+const useStyles = makeStyles((theme) => ({
+  cardHeader: {
+    backgroundColor: '#FFFFFF',
+    borderBottom: '1px solid #DBE4E9',
+    padding: '2px 12px',
+    position: 'sticky',
     display: 'flex',
-    flexDirection: 'column',
+    top: 0,
+    zIndex: 1,
+  },
+  cardWrapper: {
     flexGrow: 1,
-    padding: '1.6rem 2rem',
+    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.16)',
+    backgroundColor: '#FFFFFF',
+    border: '1px solid #DBE4E9',
+    borderRadius: 4,
+    height: '100%',
+    position: 'relative',
+  },
+  cardWrapperAbsolute: {
+    flexGrow: 1,
+    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.16)',
+    backgroundColor: '#FFFFFF',
+    border: '1px solid #DBE4E9',
+    borderRadius: 4,
+    height: '100%',
+    width: '100%',
+    position: 'absolute',
+    zIndex: 20,
+    top: 0,
+    left: 0,
   },
   cardContent: {
-    flexGrow: 1,
+    width: '100%',
   },
-  title: { color: '#F2F5F7' },
-});
+  overlay: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(11, 69, 102, .5)',
+    zIndex: 10,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+  },
+}));
 
 export type DashboardCardProps = {
-  title: string;
-  description?: string;
-  descriptionTitle?: string;
   children?: React.ReactNode | undefined;
+  description?: string;
+  disabled;
+  headerChildren: React.ReactNode | undefined;
+  style: any;
+  title: string;
 };
 
 const DashboardCard: React.FC<DashboardCardProps> = ({
-  title,
-  description,
-  descriptionTitle,
   children,
+  description,
+  disabled,
+  headerChildren,
+  style,
+  title,
 }) => {
+  const [expand, setExpand] = React.useState(false);
   const classes = useStyles();
 
+  const expandCard = () => {
+    setExpand(!expand);
+    window.dispatchEvent(new Event('resize'));
+  };
+
   return (
-    <CardMUI className={classes.card}>
-      <CardContent className={classes.cardContent}>
-        <Typography gutterBottom variant="h3">
-          {title}
-        </Typography>
-        <Typography variant="subtitle1">{descriptionTitle}</Typography>
-        <Typography variant="body2">{description}</Typography>
-      </CardContent>
+    <Box
+      className={expand ? classes.cardWrapperAbsolute : classes.cardWrapper}
+      style={{
+        ...style,
+        transition: 'all .5s ease',
+        overflow: !disabled ? 'auto' : 'hidden',
+      }}
+    >
+      {disabled && <Box className={classes.overlay}></Box>}
+
+      <Box
+        className={classes.cardHeader}
+        alignItems="center"
+        justifyContent="flex-start"
+      >
+        <Box mr={2}>
+          <Typography
+            variant="subtitle1"
+            style={{ fontSize: 16 }}
+            color="primary"
+          >
+            {title}
+          </Typography>
+          <Typography variant="body2" style={{ color: '#86A2B3' }}>
+            {description}
+          </Typography>
+        </Box>
+        <Box ml="auto" display="flex">
+          {headerChildren}
+        </Box>
+        <Box ml={2}>
+          <AspectRatioIcon
+            color="primary"
+            style={{ height: 24, width: 'auto', cursor: 'pointer' }}
+            onClick={() => expandCard()}
+          />
+        </Box>
+      </Box>
       {children}
-    </CardMUI>
+    </Box>
   );
 };
 
