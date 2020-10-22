@@ -1,3 +1,13 @@
+# [1.13.0](https://github.com/DHI-GRAS/react-components/compare/v1.12.0...v1.13.0) (2020-10-22)
+
+
+### Features
+
+* **dashboard-card:** add DashboardComponent layout and styling ([ed39940](https://github.com/DHI-GRAS/react-components/commit/ed399404a9827bc47f55d586432c8b7bbe7c8573))
+* **dashboard-card:** add skeleton for DashboardCard, card component which is intended to ease creation of dashboards ([7413ec8](https://github.com/DHI-GRAS/react-components/commit/7413ec8ce518f45e5923115df56dcb70b88ac951))
+* **dashboard-card:** add tests and fix types in DashboardCard ([6ef214b](https://github.com/DHI-GRAS/react-components/commit/6ef214be0efc594a883677fe846f3110f2ea8b64))
+* **dashboard-card:** fix issues regarding testing, add additional test for headerChildren and cleanup ([e54f07a](https://github.com/DHI-GRAS/react-components/commit/e54f07a26ea206abb716fa86160265a4278b0d39))
+
 # [1.12.0](https://github.com/DHI-GRAS/react-components/compare/v1.11.1...v1.12.0) (2020-10-21)
 
 
