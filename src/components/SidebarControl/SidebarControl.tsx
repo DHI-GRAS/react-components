@@ -20,22 +20,25 @@ export const useStyle = makeStyles({
   },
 });
 
-const icons: Array<{ id: number; component: React.FC; tooltip: string }> = [
-  // {
-  //   id: 1,
-  //   component: ExpandMoreIcon,
-  //   tooltip: "Information",
-  // },
-];
+// icons example
+// const icons: Array<{ id: number; component: React.FC; tooltip: string }> = [
+//   {
+//     id: 1,
+//     component: ExpandMoreIcon,
+//     tooltip: 'Information',
+//   },
+// ];
 
 type SidebarControlProps = {
   handleToggleSidebar?: () => void;
+  icons?: Array<{ id: number; component: React.FC; tooltip: string }>;
   mobile?: boolean;
   openSidebar?: boolean;
 };
 
 const SidebarControl: React.FC<SidebarControlProps> = ({
   handleToggleSidebar,
+  icons,
   mobile = false,
   openSidebar,
 }) => {
@@ -75,13 +78,14 @@ const SidebarControl: React.FC<SidebarControlProps> = ({
         alignItems="center"
         style={{ height: 'calc(100% - 72px)' }}
       >
-        {icons.map(({ id, component: Component, tooltip }) => (
-          <Tooltip placement="left" key={id} title={tooltip}>
-            <IconButton onClick={() => setTab(id)}>
-              <Component />
-            </IconButton>
-          </Tooltip>
-        ))}
+        {icons &&
+          icons.map(({ id, component: Component, tooltip }) => (
+            <Tooltip placement="left" key={id} title={tooltip}>
+              <IconButton onClick={() => setTab(id)}>
+                <Component />
+              </IconButton>
+            </Tooltip>
+          ))}
       </Grid>
     </Box>
   );
