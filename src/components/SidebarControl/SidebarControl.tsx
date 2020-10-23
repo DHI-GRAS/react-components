@@ -58,16 +58,32 @@ const SidebarControl: React.FC<SidebarControlProps> = ({
           style={{ backgroundColor: '#fff' }}
         >
           {openSidebar === true && mobile !== true && (
-            <ChevronRightIcon className={classes.icon} color="primary" />
+            <ChevronRightIcon
+              data-testid="sidebar-close"
+              className={classes.icon}
+              color="primary"
+            />
           )}
           {openSidebar === false && mobile !== true && (
-            <ChevronLeftIcon className={classes.icon} color="primary" />
+            <ChevronLeftIcon
+              data-testid="sidebar-open"
+              className={classes.icon}
+              color="primary"
+            />
           )}
           {openSidebar === true && mobile === true && (
-            <ExpandMoreIcon className={classes.icon} color="primary" />
+            <ExpandMoreIcon
+              data-testid="expand-close"
+              className={classes.icon}
+              color="primary"
+            />
           )}
           {openSidebar === false && mobile === true && (
-            <ExpandLessIcon className={classes.icon} color="primary" />
+            <ExpandLessIcon
+              data-testid="expand-open"
+              className={classes.icon}
+              color="primary"
+            />
           )}
         </IconButton>
       </Box>
@@ -81,7 +97,7 @@ const SidebarControl: React.FC<SidebarControlProps> = ({
         {icons &&
           icons.map(({ id, component: Component, tooltip }) => (
             <Tooltip placement="left" key={id} title={tooltip}>
-              <IconButton onClick={() => setTab(id)}>
+              <IconButton data-testid={`tab-${id}`} onClick={() => setTab(id)}>
                 <Component />
               </IconButton>
             </Tooltip>
