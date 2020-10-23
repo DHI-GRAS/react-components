@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/DHI-GRAS/react-components/compare/v1.14.0...v1.15.0) (2020-10-23)
+
+
+### Features
+
+* **export-components:** export AboutCard, DashboardCard and SidebarControl components from the library ([59a3105](https://github.com/DHI-GRAS/react-components/commit/59a31057f51704631657c49036cceaa8fa3c130c))
+
 # [1.14.0](https://github.com/DHI-GRAS/react-components/compare/v1.13.0...v1.14.0) (2020-10-23)
 
 
