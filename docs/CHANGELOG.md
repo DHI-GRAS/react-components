@@ -1,3 +1,13 @@
+# [1.14.0](https://github.com/DHI-GRAS/react-components/compare/v1.13.0...v1.14.0) (2020-10-23)
+
+
+### Features
+
+* **SidebarControl:** add data-testid properties to elements that require testind and test if correct elements are rendered given certain props ([7c08d09](https://github.com/DHI-GRAS/react-components/commit/7c08d095fe8e9f7f99f710d13a50dbdad7ce3f6c))
+* **SidebarControl:** add scaffold for the SidebarControl component ([1bff713](https://github.com/DHI-GRAS/react-components/commit/1bff71380348cd3ce61a269daa8a494cbd4f4aca))
+* **SidebarControl:** add SidebarControl test and icons array as props to SidebarControl ([167c984](https://github.com/DHI-GRAS/react-components/commit/167c9843e61d33bc92348c644b873ece909ab317))
+* **SidebarControl:** generalize SidebarControl, add styles and new props ([d91fce1](https://github.com/DHI-GRAS/react-components/commit/d91fce14571bb565de7d1b5148bf214d7132583d))
+
 # [1.13.0](https://github.com/DHI-GRAS/react-components/compare/v1.12.0...v1.13.0) (2020-10-22)
 
 
