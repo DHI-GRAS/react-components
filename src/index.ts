@@ -1,16 +1,22 @@
-import { default as DynamicForm } from './components/DynamicForm';
-import { default as SidebarTitle } from './components/SidebarTitle';
-import { default as Information } from './components/Information';
+import { default as AboutCard } from './components/AboutCard';
 import { default as CopyToClipboard } from './components/CopyToClipboard';
-import { default as Loader } from './components/Loader';
-import { default as Slider } from './components/Slider';
+import { default as DashboardCard } from './components/DashboardCard';
+import { default as DynamicForm } from './components/DynamicForm';
+import { default as Information } from './components/Information';
 import { default as Legend } from './components/Legend';
+import { default as Loader } from './components/Loader';
+import { default as SidebarControl } from './components/SidebarTitle';
+import { default as SidebarTitle } from './components/SidebarTitle';
+import { default as Slider } from './components/Slider';
 export {
-  SidebarTitle,
+  AboutCard,
+  CopyToClipboard,
+  DashboardCard,
   DynamicForm,
   Information,
-  CopyToClipboard,
-  Slider,
-  Loader,
   Legend,
+  Loader,
+  SidebarControl,
+  SidebarTitle,
+  Slider,
 };
