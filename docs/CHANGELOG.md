@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/DHI-GRAS/react-components/compare/v1.15.0...v1.15.1) (2020-10-27)
+
+
+### Bug Fixes
+
+* **DashboardCard:** Center expand more icon ([d419f1d](https://github.com/DHI-GRAS/react-components/commit/d419f1d90b554617beec6f3298612b271b225d9c))
+
 # [1.15.0](https://github.com/DHI-GRAS/react-components/compare/v1.14.0...v1.15.0) (2020-10-23)
 
 
