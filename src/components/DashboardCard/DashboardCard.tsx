@@ -104,7 +104,7 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
         <Box ml="auto" display="flex">
           {headerChildren}
         </Box>
-        <Box ml={2}>
+        <Box ml={2} display="flex">
           <AspectRatioIcon
             color="primary"
             style={{ height: 24, width: 'auto', cursor: 'pointer' }}
