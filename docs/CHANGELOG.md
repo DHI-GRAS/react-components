@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/DHI-GRAS/react-components/compare/v1.15.1...v1.15.2) (2020-10-27)
+
+
+### Bug Fixes
+
+* **Slider:** Add height prop ([a1aa714](https://github.com/DHI-GRAS/react-components/commit/a1aa7149d3b22645134ac530c6c24dc3ffbbdaec))
+
 ## [1.15.1](https://github.com/DHI-GRAS/react-components/compare/v1.15.0...v1.15.1) (2020-10-27)
 
 
