@@ -36,30 +36,4 @@ describe('Loader', () => {
     expect(wrap.find('.MuiLinearProgress-root')).toHaveLength(0);
     expect(wrap.find('.MuiCircularProgress-root')).toHaveLength(1);
   });
-
-  // it('has image as child', () => {
-  //   let wrap = mount<typeof DashboardCard>(
-  //     <DashboardCard description="Description" title="Title">
-  //       <img src="fakePathToImage" />
-  //     </DashboardCard>
-  //   );
-  //   expect(wrap.find('img').get(0).props).toHaveProperty(
-  //     'src',
-  //     'fakePathToImage'
-  //   );
-  // });
-
-  // it('has image as header child', () => {
-  //   let wrap = mount<typeof DashboardCard>(
-  //     <DashboardCard
-  //       description="Description"
-  //       headerChildren={<img src="fakePathToImage" />}
-  //       title="Title"
-  //     />
-  //   );
-  //   expect(wrap.find('img').get(0).props).toHaveProperty(
-  //     'src',
-  //     'fakePathToImage'
-  //   );
-  // });
 });
