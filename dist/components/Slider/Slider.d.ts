@@ -25,6 +25,7 @@ declare type SliderProps = {
      * Append a unit at the end of the values. (%, /10, £, $)
      */
     unit?: string | undefined;
+    height?: number | undefined;
 };
 declare const Slider: React.FC<SliderProps>;
 export default Slider;
