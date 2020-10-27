@@ -27,6 +27,7 @@ type SliderProps = {
    * Append a unit at the end of the values. (%, /10, £, $)
    */
   unit?: string | undefined;
+  height?: number | undefined;
 };
 
 const Slider: React.FC<SliderProps> = ({
@@ -40,6 +41,7 @@ const Slider: React.FC<SliderProps> = ({
   sliderMarginLeft = 1,
   noNumbers = false,
   unit = '',
+  height = 30,
 }) => {
   const [value, setValue] = React.useState(defaultValue);
 
@@ -55,6 +57,7 @@ const Slider: React.FC<SliderProps> = ({
       alignItems="center"
       justify="center"
       wrap="nowrap"
+      style={{ height: height }}
     >
       {title && (
         <Box>
