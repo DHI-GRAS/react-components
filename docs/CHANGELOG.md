@@ -1,3 +1,15 @@
+# [1.16.0](https://github.com/DHI-GRAS/react-components/compare/v1.15.2...v1.16.0) (2020-11-07)
+
+
+### Bug Fixes
+
+* **Loader:** Add test for Loader component ([5b8d46c](https://github.com/DHI-GRAS/react-components/commit/5b8d46c77c5290626ca83f8fda5d6eeeda3a7c79))
+
+
+### Features
+
+* **theme:** Add Theme to be exported from the library. ([f9dfdeb](https://github.com/DHI-GRAS/react-components/commit/f9dfdeb6eed8a39ba2f369003356ed87beff7b3e))
+
 ## [1.15.2](https://github.com/DHI-GRAS/react-components/compare/v1.15.1...v1.15.2) (2020-10-27)
 
 
