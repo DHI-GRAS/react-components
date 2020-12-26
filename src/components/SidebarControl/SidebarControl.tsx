@@ -1,24 +1,26 @@
-import * as React from 'react';
-import { Box, Grid, IconButton, Tooltip, makeStyles } from '@material-ui/core';
+import * as React from 'react'
 import {
-  ChevronLeft as ChevronLeftIcon,
-  ChevronRight as ChevronRightIcon,
-  ExpandLess as ExpandLessIcon,
-  ExpandMore as ExpandMoreIcon,
-} from '@material-ui/icons';
+	Box, Grid, IconButton, Tooltip, makeStyles,
+} from '@material-ui/core'
+import {
+	ChevronLeft as ChevronLeftIcon,
+	ChevronRight as ChevronRightIcon,
+	ExpandLess as ExpandLessIcon,
+	ExpandMore as ExpandMoreIcon,
+} from '@material-ui/icons'
 
 export const useStyle = makeStyles({
-  icon: {
-    backgroundColor: '#fff',
-    height: 22,
-  },
-  activeIcon: {
-    backgroundColor: '#0b4566',
-    '& path': {
-      fill: '#fff',
-    },
-  },
-});
+	icon: {
+		backgroundColor: '#fff',
+		height: 22,
+	},
+	activeIcon: {
+		backgroundColor: '#0b4566',
+		'& path': {
+			fill: '#fff',
+		},
+	},
+})
 
 // icons example
 // const icons: Array<{ id: number; component: React.FC; tooltip: string }> = [
@@ -30,81 +32,83 @@ export const useStyle = makeStyles({
 // ];
 
 type SidebarControlProps = {
-  handleToggleSidebar?: () => void;
-  icons?: Array<{ id: number; component: React.FC; tooltip: string }>;
-  mobile?: boolean;
-  openSidebar?: boolean;
-};
+  handleToggleSidebar?: () => void,
+  icons?: { id: number; component: React.FC; tooltip: string }[],
+  mobile?: boolean,
+  openSidebar?: boolean,
+}
 
 const SidebarControl: React.FC<SidebarControlProps> = ({
-  handleToggleSidebar,
-  icons,
-  mobile = false,
-  openSidebar,
+	handleToggleSidebar,
+	icons,
+	mobile = false,
+	openSidebar,
 }) => {
-  const classes = useStyle();
-  const [tab, setTab] = React.useState<number | undefined>();
 
-  return (
-    <Box
-      flexGrow={1}
-      display="flex"
-      flexDirection={mobile === true ? 'row' : 'column'}
-      style={{ overflowY: 'auto', height: '100%' }}
-    >
-      <Box>
-        <IconButton
-          onClick={handleToggleSidebar}
-          style={{ backgroundColor: '#fff' }}
-        >
-          {openSidebar === true && mobile !== true && (
-            <ChevronRightIcon
-              data-testid="sidebar-close"
-              className={classes.icon}
-              color="primary"
-            />
-          )}
-          {openSidebar === false && mobile !== true && (
-            <ChevronLeftIcon
-              data-testid="sidebar-open"
-              className={classes.icon}
-              color="primary"
-            />
-          )}
-          {openSidebar === true && mobile === true && (
-            <ExpandMoreIcon
-              data-testid="expand-close"
-              className={classes.icon}
-              color="primary"
-            />
-          )}
-          {openSidebar === false && mobile === true && (
-            <ExpandLessIcon
-              data-testid="expand-open"
-              className={classes.icon}
-              color="primary"
-            />
-          )}
-        </IconButton>
-      </Box>
-      <Grid
-        container
-        direction="column"
-        justify="center"
-        alignItems="center"
-        style={{ height: 'calc(100% - 72px)' }}
-      >
-        {icons &&
+	const classes = useStyle()
+	const [ tab, setTab ] = React.useState<number | undefined>()
+
+	return (
+		<Box
+			flexGrow={1}
+			display={'flex'}
+			flexDirection={mobile ? 'row' : 'column'}
+			style={{ overflowY: 'auto', height: '100%' }}
+		>
+			<Box>
+				<IconButton
+					onClick={handleToggleSidebar}
+					style={{ backgroundColor: '#fff' }}
+				>
+					{openSidebar && !mobile && (
+					<ChevronRightIcon
+						data-testid={'sidebar-close'}
+						className={classes.icon}
+						color={'primary'}
+					/>
+					)}
+					{!openSidebar && !mobile && (
+					<ChevronLeftIcon
+						data-testid={'sidebar-open'}
+						className={classes.icon}
+						color={'primary'}
+					/>
+					)}
+					{openSidebar && mobile && (
+					<ExpandMoreIcon
+						data-testid={'expand-close'}
+						className={classes.icon}
+						color={'primary'}
+					/>
+					)}
+					{!openSidebar && mobile && (
+					<ExpandLessIcon
+						data-testid={'expand-open'}
+						className={classes.icon}
+						color={'primary'}
+					/>
+					)}
+				</IconButton>
+			</Box>
+			<Grid
+				container
+				direction={'column'}
+				justify={'center'}
+				alignItems={'center'}
+				style={{ height: 'calc(100% - 72px)' }}
+			>
+				{icons &&
           icons.map(({ id, component: Component, tooltip }) => (
-            <Tooltip placement="left" key={id} title={tooltip}>
-              <IconButton data-testid={`tab-${id}`} onClick={() => setTab(id)}>
-                <Component />
-              </IconButton>
-            </Tooltip>
+	<Tooltip placement={'left'} key={id} title={tooltip}>
+		<IconButton data-testid={`tab-${id}`} onClick={() => setTab(id)}>
+			<Component />
+		</IconButton>
+	</Tooltip>
           ))}
-      </Grid>
-    </Box>
-  );
-};
+			</Grid>
+		</Box>
+	)
 
-export default SidebarControl;
+}
+
+export default SidebarControl
