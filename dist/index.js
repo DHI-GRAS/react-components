@@ -1,1 +1,1 @@
-export { default } from './InlineLegend';
+export { default } from './FullscreenLoader';

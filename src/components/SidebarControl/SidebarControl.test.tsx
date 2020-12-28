@@ -1,4 +1,4 @@
-import 'jsdom-global/register'
+import 'components/FullscreenLoader/node_modules/jsdom-global/register'
 import * as React from 'react'
 import { mount } from 'enzyme'
 import {

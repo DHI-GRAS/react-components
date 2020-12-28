@@ -1,45 +1,49 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import { CircularProgress, LinearProgress, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(() => ({
-	spinner: {
+	blocking: {
 		position: 'fixed',
-		width: '100vw',
+		left: 0,
 		top: 0,
-		height: 4,
-		zIndex: 2000,
-		backgroundColor: 'white',
-	},
-	topbar: {
-		position: 'fixed',
-		width: '100vw',
+		right: 0,
+		bottom: 0,
 		height: '100vh',
 		zIndex: 2000,
 		backgroundColor: 'rgba(13,57,88,0.9)',
+		color: '#ffffff',
+	},
+	topbar: {
+		position: 'fixed',
+		left: 0,
+		top: 0,
+		right: 0,
+		height: '4px',
+		zIndex: 2000,
 		color: 'white',
 	},
 }))
 
-export type LoaderProps = {
+interface Props {
   isLoading?: boolean,
-  variant?: 'topbar' | 'spinner',
+  variant?: 'topbar' | 'blocking',
 }
 
-const Loader: React.FC<LoaderProps> = ({
+const Loader: FC<Props> = ({
 	isLoading = false,
-	variant = 'spinner',
+	variant = 'blocking',
 }) => {
 
 	const classes = useStyles()
 	if (isLoading) {
 
-		if (variant === 'spinner') return (
+		if (variant === 'blocking') return (
 			<Grid
 				container
 				alignItems={'center'}
 				justify={'center'}
-				className={classes.spinner}
+				className={classes.blocking}
 			>
 				<CircularProgress color={'inherit'} size={50} thickness={5} />
 			</Grid>
