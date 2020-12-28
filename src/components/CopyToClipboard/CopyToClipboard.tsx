@@ -1,70 +1,65 @@
-import * as React from 'react'
+import React, { FC, useState } from 'react'
 import { Grid, Tooltip } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined'
 import Clipboard from 'react-clipboard.js'
 
-const disabledStyle = {
-	// borderBottom: '1px solid #cfdbe2',
-	color: '#cfdbe2',
-	cursor: 'no-drop',
-}
+const useStyles = makeStyles(() => ({
+	disabledRoot: {
+		color: '#cfdbe2',
+		cursor: 'no-drop',
+	},
+	enabledRoot: {
+		color: '#0b4566',
+		cursor: 'pointer',
+	},
+	gridItem: {
+		width: 32,
+	},
+	clipboard: {
+		background: 'none',
+		border: '0px',
+		outline: 'none',
+	},
+	outlineIcon: {
+		width: 21,
+		height: 21,
+	},
+}))
 
-const enabledStyle = {
-	// borderBottom: '1px solid #0b4566',
-	color: '#0b4566',
-	cursor: 'pointer',
-}
-
-export type CopyToClipboardProps = {
+export interface Props {
   disabled?: boolean,
-  helperText?: string,
-  url?: boolean,
-  message?: string,
+  successLabel?: string,
+  tooltipLabel?: string,
+  toCopy?: string,
+  afterCopy?: Function,
 }
 
-export const mockCopy: VoidFunction = () => {
-	// call this function
-}
-
-const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
+const CopyToClipboard: FC<Props> = ({
 	disabled = false,
-	helperText = '',
-	message = '',
+	successLabel = 'URL copied to Clipboard.',
+	tooltipLabel = 'Copy URL',
+	toCopy = window.location.href,
+	afterCopy,
 }) => {
 
-	const [ copyUrl ] = React.useState(window.location.href)
-	const [ tooltip, setTooltip ] = React.useState(
-		helperText || (message ? 'Copy text' : 'Copy URL')
-	)
+	const classes = useStyles()
 
-	const copyAction = () => {
+	const [ tooltip, setTooltip ] = useState(tooltipLabel)
 
-		// mockCopy();
-		if (message) {
-
-			setTooltip('Text copied to Clipboard.')
-			setTimeout(() => {
-
-				setTooltip(helperText || 'Copy text')
-
-			}, 5000)
-
-		} else {
-
-			setTooltip('URL copied to Clipboard.')
-			setTimeout(() => {
-
-				setTooltip(helperText || 'Copy URL')
-
-			}, 5000)
-
-		}
-
-	}
 
 	const copy = () => {
 
-		if (!disabled) copyAction()
+		if (disabled) return
+
+		setTooltip(successLabel)
+		if (afterCopy) afterCopy()
+		setTimeout(() => {
+
+			setTooltip(tooltipLabel)
+
+		}, 5000)
+
 
 	}
 
@@ -74,23 +69,19 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
 			spacing={0}
 			justify={'space-between'}
 			alignItems={'flex-end'}
-			style={disabled ? disabledStyle : enabledStyle}
-			onClick={() => copy()}
+			className={disabled ? classes.disabledRoot : classes.enabledRoot}
+			onClick={copy}
 		>
-			<Grid item style={{ width: 32 }}>
+			<Grid item className={classes.gridItem}>
 				<Grid container alignItems={'center'} justify={'center'}>
 					<Clipboard
-						data-clipboard-text={message || copyUrl}
-						className={'copy-clipboard'}
-						style={{ background: 'none', border: '0px', outline: 'none' }}
+						data-clipboard-text={toCopy}
+						className={`copy-clipboard ${classes.clipboard}`}
 					>
 						<Tooltip title={tooltip}>
 							<FileCopyOutlinedIcon
 								color={'primary'}
-								style={{
-									width: 21,
-									height: 21,
-								}}
+								className={classes.outlineIcon}
 							/>
 						</Tooltip>
 					</Clipboard>

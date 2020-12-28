@@ -1,1 +1,1 @@
-export { default } from './FullscreenLoader';
+export { default } from './CopyToClipboard';
