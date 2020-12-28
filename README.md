@@ -12,6 +12,11 @@
 
 Generic react components library for our frontends. The npm package can be found [here](https://www.npmjs.com/package/@dhi-gras/react-components).
 
+
+# Components should be used from [shared solutions Bit collection](https://bit.dev/dhi-solutions/shared)
+This repository can still be used for developing and publishing the components to the collection.  
+
+
 This package is created using [TypeScript](https://www.typescriptlang.org/) and [MaterialUI](https://material-ui.com/), built using [Yarn](https://classic.yarnpkg.com/en/) and bundled using [Webpack](https://webpack.js.org/).
 
 # Showcase

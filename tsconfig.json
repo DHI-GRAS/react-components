@@ -1,15 +1,20 @@
 {
-  "include": ["src/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"],
   "compilerOptions": {
-    "module": "commonjs",
-    "strictNullChecks": true,
-    "target": "es5",
-    "jsx": "react",
+    "target": "es6",
+    "baseUrl": "src",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "lib": ["es2015", "dom"],
-    "outDir": "dist",
-    "sourceMap": true,
-    "declaration": true
-  }
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noEmit": true,
+		"jsx": "react"
+  },
+  "include": [
+    "src",
+  ]
 }

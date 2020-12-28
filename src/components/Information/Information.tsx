@@ -61,11 +61,11 @@ const Information: React.FC = () => {
 							<ExpandMoreIcon
 								color={'primary'}
 								style={{
-                	padding: 4,
-                	width: '16px',
+									padding: 4,
+									width: '16px',
 								}}
 							/>
-            )}
+		)}
 						aria-controls={'panel1bh-content'}
 						id={'panel1bh-header'}
 					>
