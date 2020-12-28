@@ -1,1 +1,1 @@
-export { default } from './DynamicForm';
+export { default } from './DynamicForm'

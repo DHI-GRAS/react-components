@@ -1,1 +1,1 @@
-export { default } from './Privacy';
+export { default } from './Privacy'
