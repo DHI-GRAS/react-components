@@ -1,3 +1,10 @@
+## [1.16.1](https://github.com/DHI-GRAS/react-components/compare/v1.16.0...v1.16.1) (2021-11-01)
+
+
+### Bug Fixes
+
+* **Slider:** Change title prop ([71244ed](https://github.com/DHI-GRAS/react-components/commit/71244edb0dfca2b0faee372ab0ca641d66c8aefa))
+
 # [1.16.0](https://github.com/DHI-GRAS/react-components/compare/v1.15.2...v1.16.0) (2020-11-07)
 
 
