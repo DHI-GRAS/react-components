@@ -1,10 +1,10 @@
-import * as React from 'react';
+import { ReactNode, FC } from 'react';
 declare type SliderProps = {
     /**
      * Default values of the slider in format `[min, max]` or `number`.
      */
     defaultValue: number[] | number;
-    title?: string | undefined;
+    title?: string | ReactNode | undefined;
     min?: number | undefined;
     max?: number | undefined;
     step?: number | undefined;
@@ -25,7 +25,6 @@ declare type SliderProps = {
      * Append a unit at the end of the values. (%, /10, £, $)
      */
     unit?: string | undefined;
-    height?: number | undefined;
 };
-declare const Slider: React.FC<SliderProps>;
+declare const Slider: FC<SliderProps>;
 export default Slider;
