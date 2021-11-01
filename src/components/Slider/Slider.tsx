@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { ReactNode, FC, useState } from 'react';
 import { Slider as MSlider, Box, Grid, Typography } from '@material-ui/core';
 
 type SliderProps = {
@@ -6,7 +6,7 @@ type SliderProps = {
    * Default values of the slider in format `[min, max]` or `number`.
    */
   defaultValue: number[] | number;
-  title?: string | undefined;
+  title?: string | ReactNode | undefined;
   min?: number | undefined;
   max?: number | undefined;
   step?: number | undefined;
@@ -27,10 +27,9 @@ type SliderProps = {
    * Append a unit at the end of the values. (%, /10, £, $)
    */
   unit?: string | undefined;
-  height?: number | undefined;
 };
 
-const Slider: React.FC<SliderProps> = ({
+const Slider: FC<SliderProps> = ({
   defaultValue = [0, 1],
   title,
   min = 0,
@@ -41,9 +40,8 @@ const Slider: React.FC<SliderProps> = ({
   sliderMarginLeft = 1,
   noNumbers = false,
   unit = '',
-  height = 30,
 }) => {
-  const [value, setValue] = React.useState(defaultValue);
+  const [value, setValue] = useState(defaultValue);
 
   const handleChange = (newValue) => {
     setValue(newValue);
@@ -57,7 +55,6 @@ const Slider: React.FC<SliderProps> = ({
       alignItems="center"
       justify="center"
       wrap="nowrap"
-      style={{ height: height }}
     >
       {title && (
         <Box>
@@ -69,7 +66,7 @@ const Slider: React.FC<SliderProps> = ({
               marginRight: noNumbers ? '1rem' : '0rem',
             }}
           >
-            <Typography variant="h5">{title}</Typography>
+            <Typography variant="body2">{title}</Typography>
           </Grid>
         </Box>
       )}

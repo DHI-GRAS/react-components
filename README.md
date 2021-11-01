@@ -32,7 +32,7 @@ yarn add @dhi-gras/react-components
 
 ## Contributing
 
-If you would like to contribute to our project, please read the [repository guidelines](https://github.com/DHI-GRAS/react-components/blob/master/docs/CONTRIBUTING.md).
+If you would like to contribute to our project, please read the [repository guidelines] - to be added.
 
 ## Documentation
 
